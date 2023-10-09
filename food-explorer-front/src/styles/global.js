@@ -35,7 +35,7 @@ export default createGlobalStyle`
             border: solid 10px transparent;
         }
 
-        /* Chrome, Safari, Edge, Opera */
+        
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
         -webkit-appearance: none;
