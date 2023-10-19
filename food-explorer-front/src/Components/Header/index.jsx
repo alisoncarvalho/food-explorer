@@ -7,7 +7,7 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import {Button} from '../Button'
 import {RxExit} from 'react-icons/rx'
 
-export function Header({isAdmin }){
+export function Header({isAdmin}){
     return(
         <Container>
             <Content>

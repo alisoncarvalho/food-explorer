@@ -10,7 +10,8 @@ export const Container = styled.header`
 
 export const Content = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 32px;
     align-items: center;
     white-space: nowrap;
 
@@ -18,12 +19,18 @@ export const Content = styled.div`
 
     
     
-    padding: 1rem 6rem;
+    padding:24px 123px;
     gap: 3.2rem;
 
     .redButton{
-        width: 100%;
-        max-width: 12rem;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+
+        width: 226px;
+       
     }
 
     a{
@@ -36,19 +43,15 @@ export const Content = styled.div`
 `;
 
 export const Search = styled.div`
-align-self: center;
+position: relative;
+
+flex: 1;
 width: 100%;
+justify-content: center;
 
-#search{
-    text-align:center;
-    
-}
-svg{
-    margin-left:4rem;
-    margin-right: -4rem;
-}
-
-    
-
-    
+gap: 14px;
 `;
+
+
+
+    

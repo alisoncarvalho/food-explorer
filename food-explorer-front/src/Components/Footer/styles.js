@@ -2,12 +2,22 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    
+    grid-area: "footer";
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+
+    width: 100%;
+    height: 77px;
+
+    background-color: ${({theme})=>theme.COLORS.DARK_600};
     
+    
+
+    padding: 0 123px;
 
     .logo{
         display: flex;
@@ -29,52 +39,22 @@ export const Container = styled.div`
         }
 
     }
-    @media (min-width:1000px) {
-        grid-area: "footer";
-
-        width: 100%;
-        height: 77px;
-
-        background-color: ${({theme})=>theme.COLORS.DARK_600};
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        gap: 800px;
-        
-        
-
-        
-
-    }
-
-    @media (min-width: 428px) {
-        grid-area: "footer";
-        width: 100%;
-        
-        
-        background-color: ${({theme})=>theme.COLORS.DARK_600};
-
-        
-        .logo{
-            width: 140px;
-        }
-        p{
-            width: 220px;
-            white-space: nowrap;
-        }
-
-        
-        
-        padding: 0 29px;
-
-        
-
-        
-
-    }
     
-    
-
-
 `;
+
+
+    
+
+
+    
+        
+        
+
+        
+
+    
+
+    
+    
+    
+
