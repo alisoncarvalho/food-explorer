@@ -1,5 +1,5 @@
 
-import {Container , Main , Content} from './styles'
+import {Container , Main , Content} from './styles';
 import {Header} from '../../Components/Header'
 import {Footer} from '../../Components/Footer'
 import image from '../../assets/home-image.png'
@@ -15,7 +15,7 @@ import ravanello from "../../assets/images/Mask group.png"
 
 
 
-export function Home({isAdmin = false}){
+export function Home(){
     // const carousel = useRef(null);
 
     // function handleRightCLick(e){
