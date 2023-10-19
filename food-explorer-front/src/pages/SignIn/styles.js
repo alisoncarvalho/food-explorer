@@ -29,6 +29,7 @@ export const Container = styled.div`
 
 
     .block{
+        flex: 1;
         background-color:${({theme})=>theme.COLORS.DARK_700};
         border-radius: 16px;
         padding: 6.4rem;

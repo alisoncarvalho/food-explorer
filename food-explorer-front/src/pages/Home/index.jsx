@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+
 import {Container , Main , Content} from './styles'
 import {Header} from '../../Components/Header'
 import {Footer} from '../../Components/Footer'
@@ -9,7 +9,7 @@ import {MdKeyboardArrowLeft , MdKeyboardArrowRight} from 'react-icons/md'
 
 //import images
 import torradas from "../../assets/images/Mask group-1.png"
-import spaguetti from "../../assets/images/Mask group-2.png"
+import spaguetti from "../../assets/images/camarao.png"
 import ravanello from "../../assets/images/Mask group.png"
 
 

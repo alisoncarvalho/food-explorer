@@ -24,14 +24,10 @@ export function Dish(){
         <Container>
             <Content>
 
-                <Header isAdmin/>
+                <Header/>
                 <Main>
                     <a><IoIosArrowBack/> voltar </a>
-                    {loading ? (
-                        <div>
-                            <p>carregando...</p>
-                        </div>
-                    ) : (
+                    
                         <div className="dishSelected">
                             <img src={pratoDePedreiro}/>
                             <div className="dados">
@@ -47,23 +43,18 @@ export function Dish(){
                                     <Tag title="pão naan"/>
                                 </div>
     
-                                {dataUser.admin ? (
-                                    <div className="editOrder">
-                                        <Button title="Editar prato"/>
+                                <div className="addOrder">
+                                    <div className='amount'>
+                                        <button className='background'><AiOutlineMinus/></button>
+                                        <span>01</span>
+                                        <button className='background'><AiOutlinePlus/></button>
                                     </div>
-                                ) : (
-                                    <div className="addOrder">
-                                        <div className='amount'>
-                                            <button className='background'><AiOutlineMinus/></button>
-                                            <span>01</span>
-                                            <button className='background'><AiOutlinePlus/></button>
-                                        </div>
-                                        <Button icon={TbReceipt} title="pedir - R$25,00"/>
-                                    </div>
-                                )}                        
+                                    <Button icon={TbReceipt} title="pedir - R$25,00"/>
+                                </div>
+                                                     
                             </div>
                         </div>
-                    )}
+                    
                     
                     
 

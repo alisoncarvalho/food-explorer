@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
+    flex: 1;
     height: 48px;
     width: 100%;
     background-color: ${({theme})=>theme.COLORS.TOMATO_100};
