@@ -12,12 +12,16 @@ import {SignIn} from './pages/SignIn/index.jsx'
 import {Home} from './pages/Home/index.jsx'
 import {Dish} from './Pages/Dish/index.jsx'
 import { Footer } from './Components/Footer/index.jsx'
+import {NewDish} from './Pages/NewDish'
+import {EditDish} from './Pages/EditDish'
+import {Menu} from './Pages/Menu'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
-      <Footer/>
+      <Home/>
     </ThemeProvider>
   </React.StrictMode>,
 )

@@ -4,27 +4,21 @@ export const Container = styled.div`
     width: 100%;
     background-color: ${({theme})=> theme.COLORS.DARK_400};
 
-    
     display: grid ;
     grid-template-rows: 114px auto 77px;
     grid-area: 
     "header"
     "form"
     "footer";
-   
     
     
-
     label{
         margin-top: 24px;
         margin-bottom: 16px;
 
         display: flex;
-        
-        
-
     }
-
+    
     a{
         display: flex;
         flex-direction: row;
@@ -32,24 +26,28 @@ export const Container = styled.div`
         justify-content: flex-start;
         margin-bottom: 24px;
         
-        
-
         color: ${({theme})=>theme.COLORS.LIGHT_300};
     }
-
+    
     h1{
         display: flex;
         color: ${({theme})=>theme.COLORS.LIGHT_300}; 
         font-weight: 500;
     }
-
-    
-
-    
-
-    
     
 `;
+        
+
+        
+
+
+
+    
+
+    
+
+    
+    
 
 export const Form = styled.form`
     display: flex;
@@ -62,12 +60,10 @@ export const Form = styled.form`
             flex-direction: column;
             align-items: flex-start;
             cursor: pointer;
-
-            margin-bottom: 0;
             
+            margin-bottom: 0;
         }
-
-
+            
         span{
             display: flex;
             flex-direction: row;
@@ -77,6 +73,7 @@ export const Form = styled.form`
             top: 12px;
             left: 14px;
         }
+
         .changeImage{
             width: 100%;
             height: 48px;
@@ -87,19 +84,11 @@ export const Form = styled.form`
             gap: 8px;
             position: relative;
             margin-top: 16px;
-
-
-            
-
-        
-
         }
-
+        
         #image-file{
         display: none;
         }
-        
-        
 
     }   
 
@@ -126,10 +115,9 @@ export const Form = styled.form`
             
         }
     }
-
+            
     .tagsBox{
-        
-        height: fit-content;
+        width: 100%;        
         border: none;
         border-radius: 5px;
         height: 48px;
@@ -139,7 +127,7 @@ export const Form = styled.form`
         
 
         .tags{
-            width:100%;
+            width: 100px;
             display: flex;
             flex-direction: row;
             gap: 8px;
@@ -157,6 +145,15 @@ export const Form = styled.form`
         background-color: ${({theme})=>theme.COLORS.TOMATO_400};
         margin-top: 24px;
     }
+        
+
+
+        
+        
+
+
+
+
 
     @media (min-width: 900px) {
         .firstline{
@@ -187,7 +184,8 @@ export const Form = styled.form`
              gap: 32px;
 
             .tagsBox{
-                width: 1100px ;
+                width: 100%;
+                min-width:837px;
             }
 
             .price{

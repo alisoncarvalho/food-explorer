@@ -5,6 +5,7 @@ export const Container = styled.div`
     align-items: center;
     
     
+    
 
     background-color: ${({theme , isNew})=> isNew ? "transparent" : theme.COLORS.LIGHT_600 };
     color: ${({theme , isNew})=> isNew ? theme.COLORS.LIGHT_500 : theme.COLORS.LIGHT_100 };
@@ -28,10 +29,14 @@ export const Container = styled.div`
         color: ${({theme})=>theme.COLORS.LIGHT_600};
     }
     
-    >input{
-        height:32px;
-        width:100%;
-        padding: 0 12px;
+    .tag{
+        height:32px; 
+        
+        
+        padding: 10px 16px;
+        
+        text-align:center;
+        
         
 
 

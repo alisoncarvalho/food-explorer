@@ -9,7 +9,7 @@ import {TextArea} from '../../Components/TextArea'
 import { Section } from "../../Components/Section";
 import { NoteItem } from "../../Components/NoteItem";
 
-export function NewDish(isAdmin){
+export function NewDish(){
     return(
         <Container>
             <Header isAdmin/>
