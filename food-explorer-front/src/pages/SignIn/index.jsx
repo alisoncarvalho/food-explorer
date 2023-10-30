@@ -1,8 +1,10 @@
-import { useState } from "react";
+
 import { Container , Form} from "./styles";
 import {Input} from '../../Components/Input'
 import { Button } from "../../Components/Button";
-import { Logo } from "../../Components/Logo";
+import {Link} from "react-router-dom"
+
+
 
 
 
@@ -33,7 +35,7 @@ export function SignIn(){
                     </div>
                     
                     <Button title="Entrar"/>
-                    <a href="/cadastrar">Criar conta</a>
+                    <Link to="/register">Criar conta</Link>
                 </Form>
             </div>
             

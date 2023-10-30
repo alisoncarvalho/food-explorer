@@ -7,13 +7,13 @@ export const Container = styled.div`
     
     display: grid ;
     grid-template-rows: 114px auto 77px;
-    grid-area: 
-    "header"
-    "form"
-    "footer";
+    
+    overflow: auto;
+    
+
    
     
-    
+
 
     label{
         margin-top: 24px;
@@ -49,6 +49,15 @@ export const Container = styled.div`
 
     
     
+`;
+
+export const Content = styled.div`
+    width: 100%;
+    height: 100vh;
+    
+    max-width: 1368px;
+    
+    margin: auto;
 `;
 
 export const Form = styled.form`
@@ -214,7 +223,8 @@ display: flex;
              gap: 32px;
 
             .tagsBox{
-                width: 1100px ;
+                width:837px;
+                
             }
 
             .price{

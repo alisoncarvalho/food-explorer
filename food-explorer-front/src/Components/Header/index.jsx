@@ -1,4 +1,4 @@
-import {Container, Content , Search} from './styles'
+import {Container, Content , Search, Exit,RedButton} from './styles'
 import {AiOutlineMenu} from 'react-icons/ai'
 import {TbReceipt} from 'react-icons/tb'
 import {Logo} from '../Logo'
@@ -17,15 +17,18 @@ export function Header({isAdmin}){
                     <Input id="search" icon={AiOutlineSearch} placeholder="Busque por pratos ou ingredientes"/>
                     </label>
                 </Search>
-                <div className="redButton">
+                <RedButton>
                     <Button className="buttonRed" icon={!isAdmin && TbReceipt} title={isAdmin ? "Novo prato" : "Pedidos (0)" } />
-                </div>
+
+                </RedButton>
+                
+                <Exit>
+                <a href="/">
+                    <RxExit/>
+                </a>
+                </Exit>
+                
                     
-                    <div className="exit">
-                        <a href="/">
-                        <RxExit/>
-                        </a>
-                    </div>
             </Content>
         </Container>
     )

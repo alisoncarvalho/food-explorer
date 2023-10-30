@@ -2,38 +2,22 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
+    height: 100vh;
     background-color: ${({theme})=> theme.COLORS.DARK_400};
 
-    display: grid ;
-    grid-template-rows: 114px auto 77px;
+    /* display: grid ; */
+    grid-template-rows: 104px auto 77px;
     grid-area: 
     "header"
     "form"
     "footer";
     
     
-    label{
-        margin-top: 24px;
-        margin-bottom: 16px;
-
-        display: flex;
-    }
     
-    a{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 24px;
-        
-        color: ${({theme})=>theme.COLORS.LIGHT_300};
-    }
     
-    h1{
-        display: flex;
-        color: ${({theme})=>theme.COLORS.LIGHT_300}; 
-        font-weight: 500;
-    }
+    
+    
+    
     
 `;
         
@@ -43,7 +27,14 @@ export const Container = styled.div`
 
 
     
-
+export const Content = styled.div`
+    width: 100%;
+    height: 100vh;
+    
+    max-width: 1368px;
+    
+    margin: auto;
+`;
     
 
     
@@ -52,7 +43,32 @@ export const Container = styled.div`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    padding: 40px 123px;
+    padding: 24px 123px;
+
+    h1{
+        display: flex;
+        color: ${({theme})=>theme.COLORS.LIGHT_300}; 
+        font-weight: 500;
+    }
+
+    
+
+    a{
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+
+        font-weight: 700;
+        color: ${({theme})=>theme.COLORS.LIGHT_300};
+        margin-bottom: 24px;
+    }
+
+    label{
+        margin-top: 24px;
+        margin-bottom: 16px;
+
+        display: flex;
+    }
 
     .labelImage{
         
@@ -127,7 +143,8 @@ export const Form = styled.form`
         
 
         .tags{
-            width: 100px;
+            width: 100%;
+
             display: flex;
             flex-direction: row;
             gap: 8px;
@@ -178,14 +195,13 @@ export const Form = styled.form`
         }
 
         .secondLine{
-            
+            width: 100%;
             display: flex;
             flex-direction: row;
-             gap: 32px;
+            gap: 32px;
 
             .tagsBox{
-                width: 100%;
-                min-width:837px;
+                width: 837px;
             }
 
             .price{

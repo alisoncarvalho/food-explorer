@@ -18,13 +18,15 @@ export const Container = styled.div`
         gap: 1.9rem;
         align-items: center;
 
-        p{
-            font-family: Roboto;
-            font-size: 4.2rem;
-            font-weight: 700;
-        }
+        
     }
     
+    p{
+        font-family: Roboto;
+        font-size: 4.2rem;
+        font-weight: 700;
+       
+    }
     
 
 

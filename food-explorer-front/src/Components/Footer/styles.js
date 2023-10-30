@@ -1,23 +1,34 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.footer`
+    width: 100%;
+    height: 77px;
+    
+    background-color: ${({theme})=>theme.COLORS.DARK_600};
+    
 
-    grid-area: "footer";
+    
+    
+`;
 
+
+export const Content = styled.div`
     display: flex;
-    flex-direction: row;
+    
     align-items: center;
     justify-content: space-between;
 
+    max-width: 1368px;
+    margin: auto;
+    
+    padding: 24px 123px;
+    
 
-    width: 100%;
-    height: 77px;
 
-    background-color: ${({theme})=>theme.COLORS.DARK_600};
+
     
     
 
-    padding: 0 123px;
 
     .logo{
         display: flex;
@@ -39,11 +50,7 @@ export const Container = styled.div`
         }
 
     }
-    
 `;
-
-
-    
 
 
     

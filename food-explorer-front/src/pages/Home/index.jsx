@@ -1,8 +1,8 @@
 
-import {Container , Main , Content} from './styles';
+import {Container , Main , Content , Banner} from './styles';
 import {Header} from '../../Components/Header'
 import {Footer} from '../../Components/Footer'
-import image from '../../assets/home-image.png'
+import image from '../../assets/frutas.png'
 import {Cards} from '../../Components/Cards'
 
 import {MdKeyboardArrowLeft , MdKeyboardArrowRight} from 'react-icons/md'
@@ -35,22 +35,27 @@ export function Home(){
         
     return(
         <Container>
+                <Header />
                 <Content>
-                    <div className="homeNotAdmin">
-                    <Header />
-                    <Main>
+                    <Banner>
+                        
                         <div className="img">
                             <img src={image} alt="" />
                         </div>
-                        
                         <div className="block">
-
-                            <div id='text'>
+                            <div className="text">
                                 <h1>Sabores inigualáveis</h1>
                                 <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                             </div>
                         </div>
+                                
+                                
 
+                                
+                    </Banner>
+                        
+
+                    <Main>
                         <div className="category">
                             <div className="sides">
                                 <button ><MdKeyboardArrowLeft/></button> 
@@ -106,10 +111,10 @@ export function Home(){
 
 
                     </Main>
-                    <Footer/>
-                    </div>
+                    
                     
                 </Content>
+                <Footer/>
         </Container>
     )
 }
