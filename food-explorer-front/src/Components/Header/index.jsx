@@ -7,7 +7,11 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import {Button} from '../Button'
 import {RxExit} from 'react-icons/rx'
 
-export function Header({isAdmin}){
+import {useAuth} from "../../hooks/auth"
+
+export function Header(){
+
+    const {signOut} = useAuth()
     return(
         <Container>
             <Content>
@@ -18,12 +22,14 @@ export function Header({isAdmin}){
                     </label>
                 </Search>
                 <RedButton>
-                    <Button className="buttonRed" icon={!isAdmin && TbReceipt} title={isAdmin ? "Novo prato" : "Pedidos (0)" } />
+                    {/* <Button className="buttonRed" icon={!isAdmin && TbReceipt} title={isAdmin ? "Novo prato" : "Pedidos (0)" } /> */}
+                    <Button className="buttonRed" icon={TbReceipt} title="Pedidos (0)"  />
+
 
                 </RedButton>
                 
                 <Exit>
-                <a href="/">
+                <a href="/" onClick={signOut}>
                     <RxExit/>
                 </a>
                 </Exit>

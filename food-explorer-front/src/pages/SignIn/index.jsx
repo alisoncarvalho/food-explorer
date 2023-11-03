@@ -1,8 +1,11 @@
-
 import { Container , Form} from "./styles";
 import {Input} from '../../Components/Input'
 import { Button } from "../../Components/Button";
 import {Link} from "react-router-dom"
+
+import { useAuth } from "../../hooks/auth";
+import { useState } from "react";
+
 
 
 
@@ -10,6 +13,14 @@ import {Link} from "react-router-dom"
 
 
 export function SignIn(){
+    const [email , setEmail] = useState("")
+    const [password , setPassword] = useState("")
+
+    const {signIn} = useAuth()
+
+    function handleSignIn(){
+        signIn({email , password})
+    }
     
     
     return(
@@ -26,15 +37,15 @@ export function SignIn(){
                 <Form>
                     <div className="input-wrapper">
                         <label  htmlFor="email">Email</label>
-                        <Input  id="email" placeholder="Seu email" type="email" />
+                        <Input  id="email" placeholder="Seu email" type="email" onChange={e => setEmail(e.target.value)} />
                     </div>
                     
                     <div className="input-wrapper">
                         <label  htmlFor="password">Senha</label>
-                        <Input id="password" placeholder="Sua senha" type="password" />
+                        <Input id="password" placeholder="Sua senha" type="password" onChange={e => setPassword(e.target.value)} />
                     </div>
                     
-                    <Button title="Entrar"/>
+                    <Button title="Entrar" onPress={handleSignIn}/>
                     <Link to="/register">Criar conta</Link>
                 </Form>
             </div>
