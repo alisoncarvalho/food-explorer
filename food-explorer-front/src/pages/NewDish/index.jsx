@@ -88,34 +88,15 @@ export function NewDish(){
         fileUploadForm.append('price', price)
         fileUploadForm.append('description', description)
 
-        ingredients.map(ingredient => (
-            fileUploadForm.append("ingredients" , ingredient)
-        ))
+        
 
         await api.post("/dishes" , fileUploadForm)
             
         
-        
-        
-        
-
-
-
-        // await api.post("/dishes" , {
-        //     dishImageFile,
-        //     title,
-        //     category,
-        //     price,
-        //     description,
-        //     ingredients
-            
-
-        // })
-
-        
-
         alert("Prato criado com sucesso")
-        // navigate("/")
+        navigate("/")
+        
+        
     }
 
     return(
