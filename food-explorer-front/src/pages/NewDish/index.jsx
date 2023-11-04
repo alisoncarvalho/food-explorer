@@ -79,20 +79,20 @@ export function NewDish(){
             return alert("Ingrediente não adicionado")
         }
 
-        // const fileUploadForm = new FormData()
+        const fileUploadForm = new FormData()
 
-        // fileUploadForm.append("image" , dishImageFile)
-        // fileUploadForm.append('title', title)
-        // fileUploadForm.append('category', category)
-        // // fileUploadForm.append('ingredients', ingredients)
-        // fileUploadForm.append('price', price)
-        // fileUploadForm.append('description', description)
+        fileUploadForm.append("image" , dishImageFile)
+        fileUploadForm.append('title', title)
+        fileUploadForm.append('category', category)
+        fileUploadForm.append('ingredients', JSON.stringify(ingredients))
+        fileUploadForm.append('price', price)
+        fileUploadForm.append('description', description)
 
-        // ingredients.map(ingredient => (
-        //     fileUploadForm.append("ingredients" , ingredient)
-        // ))
+        ingredients.map(ingredient => (
+            fileUploadForm.append("ingredients" , ingredient)
+        ))
 
-        // await api.post("/dishes" , fileUploadForm)
+        await api.post("/dishes" , fileUploadForm)
             
         
         
@@ -101,16 +101,16 @@ export function NewDish(){
 
 
 
-        await api.post("/dishes" , {
-            dishImageFile,
-            title,
-            category,
-            price,
-            description,
-            ingredients
+        // await api.post("/dishes" , {
+        //     dishImageFile,
+        //     title,
+        //     category,
+        //     price,
+        //     description,
+        //     ingredients
             
 
-        })
+        // })
 
         
 
