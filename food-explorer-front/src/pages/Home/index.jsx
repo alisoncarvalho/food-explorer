@@ -1,21 +1,27 @@
-
 import {Container , Main , Content , Banner} from './styles';
 import {Header} from '../../Components/Header'
 import {Footer} from '../../Components/Footer'
 import image from '../../assets/frutas.png'
 import {Cards} from '../../Components/Cards'
-
 import {MdKeyboardArrowLeft , MdKeyboardArrowRight} from 'react-icons/md'
 
-//import images
-import torradas from "../../assets/images/Mask group-1.png"
-import spaguetti from "../../assets/images/camarao.png"
-import ravanello from "../../assets/images/Mask group.png"
+import { useEffect, useState } from 'react';
+import { api } from '../../services/api';
+
+
+
+
 
 
 
 
 export function Home(){
+    const [search, setSearch] = useState("")
+    const [ dishes , setDishes] = useState([]) 
+
+    
+
+
     // const carousel = useRef(null);
 
     // function handleRightCLick(e){
@@ -30,12 +36,24 @@ export function Home(){
     //     carousel.current.scrollLeft -= carousel.current.offsetWidth
     // }
 
-
     
+
+
+    useEffect (()=>{
+        async function fetchDishes(){
+            const response = await api.get(`/dishes/?title=${search}`)
+            setDishes(response.data)
+
+            
+        }
+        fetchDishes()
+
+        console.log(dishes)
+    },[search])
         
     return(
         <Container>
-                <Header />
+                <Header search={setSearch} />
                 <Content>
                     <Banner>
                         
@@ -64,14 +82,15 @@ export function Home(){
                                            
                             <h2 className='text'>Refeições</h2>
                             <div className="cards" /*ref={carousel}*/ >
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
+                                {
+                                    dishes.map( dish => (
+
+                                        <Cards 
+                                        key={dish.id}
+                                        dish={dish}
+                                        />
+                                    ))
+                                }
                             </div>
                             
                         </div>

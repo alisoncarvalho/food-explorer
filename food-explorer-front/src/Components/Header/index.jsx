@@ -9,7 +9,7 @@ import {RxExit} from 'react-icons/rx'
 
 import {useAuth} from "../../hooks/auth"
 
-export function Header(){
+export function Header({search}){
 
     const {signOut} = useAuth()
     return(
@@ -18,7 +18,12 @@ export function Header(){
                 <Logo />
                 <Search>
                     <label htmlFor="search">
-                    <Input id="search" icon={AiOutlineSearch} placeholder="Busque por pratos ou ingredientes"/>
+                    <Input 
+                        id="search" 
+                        icon={AiOutlineSearch} 
+                        placeholder="Busque por pratos ou ingredientes"
+                        onChange={e => {search(e.target.value)}}
+                    />
                     </label>
                 </Search>
                 <RedButton>
