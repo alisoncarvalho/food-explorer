@@ -11,7 +11,7 @@ import {TbReceipt} from 'react-icons/tb'
 import pratoDePedreiro from '../../assets/images/Mask group-1.png'
 
 
-export function Dish(){    
+export function Dish({data}){    
     return(
         <Container>
             <Header/>

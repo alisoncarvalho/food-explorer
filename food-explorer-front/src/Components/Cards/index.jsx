@@ -7,23 +7,24 @@ import { Button } from '../Button'
 import {Link} from "react-router-dom"
 import {BiEditAlt} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { api } from '../../services/api'
 
 
+export function Cards({ data ,title, description ,category, price , image, link ,showImage }){
 
-export function Cards({dish , ...rest}){
     
-
+    
     return(
        
-
-        <Container {...rest}>
+        <Container >
                 <button className='heart'><IoMdHeartEmpty/></button>
-                <img src={defalutImageDish} alt="" />
-            <Link to={`/dish/`}>
-                <h1>{dish}</h1>
+                <img src={image} alt="" />
+            <Link to={link}>
+                <h1>{title}</h1>
             </Link>
-                <p>{}</p>
-                <h3>{}</h3>
+                <p>{description}</p>
+                <h3>{data.id}</h3>
                 
                 <div id='include'>
                     <div className='amount'>
@@ -35,24 +36,6 @@ export function Cards({dish , ...rest}){
                 </div>
         </Container>
 
-        
     )
 }
-        // <Container {...rest}>
-        //         <button className='heart'><IoMdHeartEmpty/></button>
-        //         <img src={defalutImageDish} alt="" />
-        //     <Link to="/dish/:id">
-        //         <h1>Arroz carreteiro</h1>
-        //     </Link>
-        //         <p>Acompanhamento delicioso!!! </p>
-        //         <h3>R$28,00</h3>
-                
-        //         <div id='include'>
-        //             <div className='amount'>
-        //                 <button  className='button'><AiOutlineMinus/></button>
-        //                 <span>05</span>
-        //                 <button  className='button'><AiOutlinePlus/></button>
-        //             </div>
-        //             <Button title='incluir'/>
-        //         </div>
-        // </Container>
+        

@@ -1,9 +1,10 @@
 import {Container , Main , Content , Banner} from './styles';
 import {Header} from '../../Components/Header'
 import {Footer} from '../../Components/Footer'
-import image from '../../assets/frutas.png'
+import bannerImage from '../../assets/frutas.png'
 import {Cards} from '../../Components/Cards'
 import {MdKeyboardArrowLeft , MdKeyboardArrowRight} from 'react-icons/md'
+import defalutImageDish from '../../assets/images/camarao.png'
 
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
@@ -15,41 +16,32 @@ import { api } from '../../services/api';
 
 
 
-export function Home(){
+export function Home({data}){
+    
+    
     const [search, setSearch] = useState("")
     const [ dishes , setDishes] = useState([]) 
-
-    
-
-
-    // const carousel = useRef(null);
-
-    // function handleRightCLick(e){
-    //     e.preventDefault();
-    //     console.log( carousel.current.offsetWidth)
-    //     carousel.current.scrollLeft += carousel.current.offsetWidth
-    // }
-
-    // function handleLeftCLick(e){
-    //     e.preventDefault();
-    //     console.log( carousel.current.offsetWidth)
-    //     carousel.current.scrollLeft -= carousel.current.offsetWidth
-    // }
-
+    const [ sobremesa , setSobremesa] = useState([])
+    const [ bebidas , setBebidas] = useState([])
+    const [comidas , setComidas] = useState([])
     
 
 
     useEffect (()=>{
         async function fetchDishes(){
-            const response = await api.get(`/dishes/?title=${search}`)
+            const response = await api.get(`/dishes?title=${search}`)
             setDishes(response.data)
 
             
+
         }
         fetchDishes()
 
-        console.log(dishes)
+        
+
+
     },[search])
+
         
     return(
         <Container>
@@ -58,7 +50,7 @@ export function Home(){
                     <Banner>
                         
                         <div className="img">
-                            <img src={image} alt="" />
+                            <img src={bannerImage} alt="" />
                         </div>
                         <div className="block">
                             <div className="text">
@@ -83,15 +75,22 @@ export function Home(){
                             <h2 className='text'>Refeições</h2>
                             <div className="cards" /*ref={carousel}*/ >
                                 {
+                                    
+                                    
                                     dishes.map( dish => (
-
+                                        
                                         <Cards 
-                                        key={dish.id}
-                                        dish={dish}
+                                            key={dish.id}
+                                            data={dish}
                                         />
-                                    ))
+                                        
+                                    
+                                    )) 
+                                    
                                 }
                             </div>
+                            
+                                    
                             
                         </div>
 
@@ -137,3 +136,17 @@ export function Home(){
         </Container>
     )
 }
+
+// const carousel = useRef(null);
+
+    // function handleRightCLick(e){
+    //     e.preventDefault();
+    //     console.log( carousel.current.offsetWidth)
+    //     carousel.current.scrollLeft += carousel.current.offsetWidth
+    // }
+
+    // function handleLeftCLick(e){
+    //     e.preventDefault();
+    //     console.log( carousel.current.offsetWidth)
+    //     carousel.current.scrollLeft -= carousel.current.offsetWidth
+    // }
