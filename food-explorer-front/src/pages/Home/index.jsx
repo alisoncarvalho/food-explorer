@@ -79,10 +79,11 @@ export function Home({data}){
                                     
                                     dishes.map( dish => (
                                         
-                                        <Cards 
-                                            key={dish.id}
-                                            data={dish}
-                                        />
+                                        console.log(data)
+                                        // <Cards 
+                                        //     // key={dish.id}
+                                        //     // data={dish}
+                                        // />
                                         
                                     
                                     )) 
