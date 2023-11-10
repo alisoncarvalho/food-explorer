@@ -16,24 +16,23 @@ import { api } from '../../services/api';
 
 
 
-export function Home({data}){
+export function Home(){
     
     
     const [search, setSearch] = useState("")
     const [ dishes , setDishes] = useState([]) 
-    const [ sobremesa , setSobremesa] = useState([])
-    const [ bebidas , setBebidas] = useState([])
-    const [comidas , setComidas] = useState([])
     
-
+    
+    
+    
+    
 
     useEffect (()=>{
         async function fetchDishes(){
             const response = await api.get(`/dishes?title=${search}`)
             setDishes(response.data)
-
             
-
+            
         }
         fetchDishes()
 
@@ -77,16 +76,17 @@ export function Home({data}){
                                 {
                                     
                                     
-                                    dishes.map( dish => (
-                                        
-                                        console.log(data)
-                                        // <Cards 
-                                        //     // key={dish.id}
-                                        //     // data={dish}
-                                        // />
-                                        
-                                    
-                                    )) 
+                                    dishes
+                                     && dishes.map( dish => {
+                                        return (
+
+                                            <Cards 
+                                            key={dish.id}
+                                            data={dish}
+                                            />
+                                            
+                                        );
+                                    }) 
                                     
                                 }
                             </div>
@@ -102,12 +102,7 @@ export function Home({data}){
                             </div>
                             <h2 className='text'>Pratos principais</h2>                
                             <div className="cards" >
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
+                                
                             </div>
                         </div>
 
@@ -119,12 +114,7 @@ export function Home({data}){
                             </div>
                             <h2 className='text'>Sucos</h2>                
                             <div className="cards" >
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
-                                <Cards/>
+                                
                             </div>
                         </div>
 

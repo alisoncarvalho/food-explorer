@@ -11,7 +11,8 @@ import {TbReceipt} from 'react-icons/tb'
 import pratoDePedreiro from '../../assets/images/Mask group-1.png'
 
 
-export function Dish({data}){    
+export function Dish({data}){  
+    console.log(data)
     return(
         <Container>
             <Header/>
@@ -21,7 +22,7 @@ export function Dish({data}){
                     <div className="dishSelected">
                         <img src={pratoDePedreiro}/>
                         <div className="dados">
-                            <h1>Salada Ravanello</h1>
+                            <h1>braba</h1>
                             <p>Rabanetes, folhas verdes e molho agridoce salpicados <br/> com gergelim. O pão naan dá um toque especial.</p>
                         
                             <div className="tags">

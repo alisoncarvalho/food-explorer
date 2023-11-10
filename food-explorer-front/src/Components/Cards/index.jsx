@@ -11,20 +11,27 @@ import { useEffect } from 'react'
 import { api } from '../../services/api'
 
 
-export function Cards({ data ,title, description ,category, price , image, link ,showImage }){
 
+
+export function Cards({ data  } ){
+
+    console.log(data)
+
+    const dishImage = data.image ? `${api.defaults.baseURL}/files/${data.image}`: `${defalutImageDish}`
     
-    
+    console.log(api.defaults.baseURL)
     return(
        
         <Container >
                 <button className='heart'><IoMdHeartEmpty/></button>
-                <img src={image} alt="" />
-            <Link to={link}>
-                <h1>{title}</h1>
-            </Link>
-                <p>{description}</p>
-                <h3>{data.id}</h3>
+                <img src={dishImage} alt="" />
+
+                <h1>{data.title}</h1>
+                <Link to={`/dish/${data.id}`}>
+                <p>{data.description}</p>
+                <h3>{data.price}</h3>
+                </Link>
+            
                 
                 <div id='include'>
                     <div className='amount'>
