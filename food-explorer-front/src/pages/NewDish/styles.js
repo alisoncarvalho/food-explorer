@@ -5,19 +5,6 @@ export const Container = styled.div`
     height: 100vh;
     background-color: ${({theme})=> theme.COLORS.DARK_400};
 
-    /* display: grid ; */
-    grid-template-rows: 104px auto 77px;
-    grid-area: 
-    "header"
-    "form"
-    "footer";
-    
-    
-    
-    
-    
-    
-    
     
 `;
         
@@ -29,7 +16,7 @@ export const Container = styled.div`
     
 export const Content = styled.div`
     width: 100%;
-    height: 100vh;
+    
     
     max-width: 1368px;
     

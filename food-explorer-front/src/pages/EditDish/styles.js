@@ -1,41 +1,37 @@
 import styled from 'styled-components'
 
+
+
 export const Container = styled.div`
     width: 100%;
+    height: 100vh;
     background-color: ${({theme})=> theme.COLORS.DARK_400};
-
     
-    display: grid ;
-    grid-template-rows: 114px auto 77px;
-    
-    overflow: auto;
-    
-
-   
-    
-
-
-    label{
-        margin-top: 24px;
-        margin-bottom: 16px;
-
-        display: flex;
-        
+`;
         
 
-    }
-
-    a{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 24px;
-        
         
 
-        color: ${({theme})=>theme.COLORS.LIGHT_300};
-    }
+
+
+    
+export const Content = styled.div`
+    width: 100%;
+    /* height: 100vh; */
+    
+    max-width: 1368px;
+    
+    margin: auto;
+`;
+    
+
+    
+    
+
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    padding: 24px 123px;
 
     h1{
         display: flex;
@@ -45,41 +41,33 @@ export const Container = styled.div`
 
     
 
-    
+    a{
+        display: flex;
+        align-items: center;
+        font-size: 24px;
 
-    
-    
-`;
+        font-weight: 700;
+        color: ${({theme})=>theme.COLORS.LIGHT_300};
+        margin-bottom: 24px;
+    }
 
-export const Content = styled.div`
-    width: 100%;
-    height: 100vh;
-    
-    max-width: 1368px;
-    
-    margin: auto;
-`;
+    label{
+        margin-top: 24px;
+        margin-bottom: 16px;
 
-export const Form = styled.form`
+        display: flex;
+    }
 
-display: flex;
-    flex-direction: column;
-    padding: 40px 123px;
-
-    
-    
     .labelImage{
         
         label {
             flex-direction: column;
             align-items: flex-start;
             cursor: pointer;
-
-            margin-bottom: 0;
             
+            margin-bottom: 0;
         }
-
-
+            
         span{
             display: flex;
             flex-direction: row;
@@ -89,6 +77,7 @@ display: flex;
             top: 12px;
             left: 14px;
         }
+
         .changeImage{
             width: 100%;
             height: 48px;
@@ -99,25 +88,13 @@ display: flex;
             gap: 8px;
             position: relative;
             margin-top: 16px;
-
-
-            
-
-        
-
         }
-
+        
         #image-file{
         display: none;
         }
-        
-        
 
     }   
-
-
-
-    
 
     select{
         -webkit-appearance:none;
@@ -142,21 +119,20 @@ display: flex;
             
         }
     }
-
-    
-
+            
     .tagsBox{
-        width: 100%;
-        height: fit-content;
+        width: 100%;        
         border: none;
         border-radius: 5px;
+        height: 48px;
 
         background-color:${({theme})=>theme.COLORS.DARK_900} ;
-        padding: 8px;
+        padding: 6px 8px ;
         
 
         .tags{
-            width:100%;
+            width: 100%;
+
             display: flex;
             flex-direction: row;
             gap: 8px;
@@ -167,34 +143,24 @@ display: flex;
         button{
             background: none;
             margin-top: 0;
-            margin-bottom: 0;
         }
     }
 
-    .buttons{
-        
-        display: flex;
-        flex-direction: row;
-        gap: 32px;
-        padding: 24px 0;
+    button{
+        background-color: ${({theme})=>theme.COLORS.TOMATO_400};
+        margin-top: 24px;
     }
-    .button1 {
         
-        button{
-            width: 160px;
-            background-color: ${({theme})=>theme.COLORS.DARK_800};
-        }
-    }
-    .button2 {
+
+
         
-        button{
-            width: 172px;
-            background-color: ${({theme})=>theme.COLORS.TOMATO_400};
-        }
-    }
+        
+
+
+
+
 
     @media (min-width: 900px) {
-        width: 100%;
         .firstline{
             display: flex;
             flex-direction:row;
@@ -217,14 +183,13 @@ display: flex;
         }
 
         .secondLine{
-            
+            width: 100%;
             display: flex;
             flex-direction: row;
-             gap: 32px;
+            gap: 32px;
 
             .tagsBox{
-                width:837px;
-                
+                width: 837px;
             }
 
             .price{
@@ -234,20 +199,35 @@ display: flex;
         
         .buttons{
             
-            align-self: end;
-        }
-
         
+                 display: flex;
+                 flex-direction: row;
+                 gap: 32px;
+                 padding: 24px 0;
+             }
+             .button1 {
+                
+                 button{
+                     width: 160px;
+                     background-color: ${({theme})=>theme.COLORS.DARK_800};
+                 }
+             }
+             .button2 {
+                
+                 button{
+                     width: 172px;
+                     background-color: ${({theme})=>theme.COLORS.TOMATO_400};
+                 }
+             }
 
-
+             .buttons{
+            
+            align-self: end;
+            
+        }
 
 
 
     }
-
-
-
-
-    
 
 `;

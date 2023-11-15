@@ -6,12 +6,18 @@ import {Input}  from '../Input'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {Button} from '../Button'
 import {RxExit} from 'react-icons/rx'
-
+import { USER_ROLES } from '../../utils/roles'
 import {useAuth} from "../../hooks/auth"
+import { useNavigate } from 'react-router-dom'
 
 export function Header({search}){
+    const navigate = useNavigate()
+    function handleNavigate(){
+        navigate("/newdish")
+    }
 
-    const {signOut} = useAuth()
+    const {user , signOut} = useAuth()
+    const isAdmin = user.role == USER_ROLES.ADMIN
     return(
         <Container>
             <Content>
@@ -26,12 +32,14 @@ export function Header({search}){
                     />
                     </label>
                 </Search>
-                <RedButton>
-                    {/* <Button className="buttonRed" icon={!isAdmin && TbReceipt} title={isAdmin ? "Novo prato" : "Pedidos (0)" } /> */}
-                    <Button className="buttonRed" icon={TbReceipt} title="Pedidos (0)"  />
+
+                {   <RedButton>
+                        <Button className="buttonRed" onPress={handleNavigate} title={isAdmin ? "Novo prato" : `Pedidos (0)` } />
+                        
+                    </RedButton>
+                }
 
 
-                </RedButton>
                 
                 <Exit>
                 <a href="/" onClick={signOut}>

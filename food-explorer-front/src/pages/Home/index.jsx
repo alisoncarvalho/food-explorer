@@ -21,6 +21,9 @@ export function Home(){
     
     const [search, setSearch] = useState("")
     const [ dishes , setDishes] = useState([]) 
+    const [meals, setMeals] = useState([])
+    const [beverages, setBeverages] = useState([])
+    const [desserts, setDesserts] = useState([])
     
     
     
@@ -31,8 +34,49 @@ export function Home(){
         async function fetchDishes(){
             const response = await api.get(`/dishes?title=${search}`)
             setDishes(response.data)
+
+            const mealsArray = response.data.filter(
+                (dish) => dish.category === 'refeições',
+            )
             
+            const beveragesArray = response.data.filter(
+                (dish) => dish.category === 'bebidas',
+            )
             
+            const dessertsArray = response.data.filter(
+                (dish) => dish.category === 'sobremesas',
+            )
+                
+            setMeals(
+                mealsArray.map((meal) => (
+                    
+                    <Cards 
+                    key={meal.id} 
+                    data={meal}  
+                    />
+                
+                )),
+              )
+      
+              setBeverages(
+                beveragesArray.map((beverage) => (
+                  <Cards 
+                    key={beverage.id}
+                    data={beverage}
+                  
+                    
+                  />
+                )),
+              )
+      
+              setDesserts(
+                dessertsArray.map((dessert) => (
+                    <Cards 
+                    key={dessert.id} 
+                    data={dessert}  
+                    />
+                )))
+  
         }
         fetchDishes()
 
@@ -74,19 +118,9 @@ export function Home(){
                             <h2 className='text'>Refeições</h2>
                             <div className="cards" /*ref={carousel}*/ >
                                 {
+                                    meals
                                     
                                     
-                                    dishes
-                                     && dishes.map( dish => {
-                                        return (
-
-                                            <Cards 
-                                            key={dish.id}
-                                            data={dish}
-                                            />
-                                            
-                                        );
-                                    }) 
                                     
                                 }
                             </div>
@@ -100,9 +134,9 @@ export function Home(){
                                 <button ><MdKeyboardArrowLeft/></button> 
                                 <button ><MdKeyboardArrowRight/></button>
                             </div>
-                            <h2 className='text'>Pratos principais</h2>                
+                            <h2 className='text'>Sobremesas</h2>                
                             <div className="cards" >
-                                
+                            {desserts}
                             </div>
                         </div>
 
@@ -112,9 +146,9 @@ export function Home(){
                                 <button><MdKeyboardArrowLeft/></button> 
                                 <button><MdKeyboardArrowRight/></button>
                             </div>
-                            <h2 className='text'>Sucos</h2>                
+                            <h2 className='text'>Bebidas</h2>                
                             <div className="cards" >
-                                
+                                {beverages}
                             </div>
                         </div>
 

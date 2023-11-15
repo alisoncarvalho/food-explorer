@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 
-export function Tag({title, ...rest}){
+export function Tag({title}){
     return(
-        <Container {...rest} >
+        <Container  >
             {title}
         </Container>
 

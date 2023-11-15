@@ -8,7 +8,7 @@ import {Home} from "../Pages/Home"
 
 
 
-export function AppRoutes(){
+export function AdminRoutes(){
     return(
         <Routes>
             <Route path="/" element={<Home/>} />

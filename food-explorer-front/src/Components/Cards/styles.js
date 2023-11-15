@@ -11,8 +11,8 @@ export const Container = styled.div`
    position: relative;
    
    border: none;
-   /* background-color: pink; */
-   background-color: ${({theme})=>theme.COLORS.DARK_200};
+   background-color: pink;
+   /* background-color: ${({theme})=>theme.COLORS.DARK_200}; */
    border-radius: 8px;
    border: solid 1px ${({theme})=>theme.COLORS.DARK_400};
    padding:  24px;

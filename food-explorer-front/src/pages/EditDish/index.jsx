@@ -6,19 +6,21 @@ import {IoIosArrowBack} from 'react-icons/io'
 import {Button} from '../../Components/Button'
 import {FiUpload} from 'react-icons/fi'
 import {TextArea} from '../../Components/TextArea'
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { NoteItem } from "../../Components/NoteItem";
 import { useState } from "react";
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
+import { Link } from "react-router-dom";
 
 export function EditDish(){
     const {user} = useAuth()
+    const navigate = useNavigate()
 
     const [dishImage , setDishImage] = useState(user.image)
     const [dishImageFile , setDishImageFile] = useState(null)
 
-    const [dish, setDish] = useState({})
+    
     const [title, setTitle] = useState("")
 
     const [selectedCategory, setSelectedCategory] = useState("")
@@ -75,7 +77,9 @@ export function EditDish(){
             <Header />
             <Content>
                 <Form>
-                    <a href="#"><IoIosArrowBack size={22}/> voltar</a>
+                    <Link to="/">
+                        <a href="#"><IoIosArrowBack size={22}/> voltar</a>
+                    </Link>
                     <h1>Editar prato</h1>
 
                     <div className="firstline">

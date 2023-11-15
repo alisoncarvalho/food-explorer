@@ -12,6 +12,7 @@ import { useAuth } from "../../hooks/auth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
+import {Link} from "react-router-dom"
 
 export function NewDish(){
 
@@ -104,7 +105,9 @@ export function NewDish(){
             <Header />
             <Content>
                 <Form>
-                    <a href="#"><IoIosArrowBack size={22}/> voltar</a>
+                    <Link to="/">
+                        <a href="#"><IoIosArrowBack size={22}/> voltar</a>
+                    </Link>
                     <h1>Novo prato</h1>
                     
                     <div className="firstline">
@@ -133,6 +136,7 @@ export function NewDish(){
                         <div className="category">
                             <label className="label" htmlFor="category" >Categoria</label>
                             <select name="category" id="category" onChange={e => setCategory(e.target.value)}>
+                            <option value="selecionar categoria">Selecionar categoria</option>
                                 <option value="refeições">Refeições</option>
                                 <option value="sobremesas">Sobremesas</option>
                                 <option value="bebidas">Bebidas</option>

@@ -6,6 +6,7 @@ export const Container = styled.footer`
     
     background-color: ${({theme})=>theme.COLORS.DARK_600};
     
+    
 
     
     

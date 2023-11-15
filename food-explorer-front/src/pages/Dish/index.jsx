@@ -7,31 +7,128 @@ import {Button} from '../../Components/Button'
 import {Tag} from '../../Components/Tag'
 import {Link} from "react-router-dom"
 import {TbReceipt} from 'react-icons/tb'
+import { useParams , useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { api } from '../../services/api'
+import defaultImage from '../../assets/images/Mask group-1.png'
+import { useAuth } from '../../hooks/auth'
+import { USER_ROLES } from '../../utils/roles'
 
-import pratoDePedreiro from '../../assets/images/Mask group-1.png'
+
+export function Dish(){  
+    const {user} = useAuth()
+    const isAdmin = user.role == USER_ROLES.ADMIN
+
+    const [dish , setDish] = useState(null)
+    // const [ingredient , setIngredient ] = useState([])
+    const params = useParams()
+    const navigate = useNavigate()
+
+    function handleNavigate(){
+        navigate("/editdish")
+    }
 
 
-export function Dish({data}){  
-    console.log(data)
+    
+    useEffect (()=>{
+        async function fetchDishes(){
+            const response = await api.get(`/dishes/${params.id}`)
+            setDish(response.data)
+            
+        }
+        fetchDishes()
+        
+        
+        
+        
+    },[])
+
+    
+    
+
+    // useEffect (()=>{
+    //     async function fetchIngredients(){
+    //         const response = await api.get(`/ingredients/${dish.id}`)
+    //         setIngredient(response.data)
+            
+    //     }
+    //     fetchIngredients()
+        
+        
+        
+        
+    // },[])
+    
+    
+    
     return(
         <Container>
             <Header/>
-            <Main>
+            {
+                dish && 
+                <Main>
                 <Link to="/"><IoIosArrowBack/> voltar </Link>
                 
-                    <div className="dishSelected">
-                        <img src={pratoDePedreiro}/>
+                    { isAdmin ? 
+                        (
+                        <div className="dishSelected">
+                        <img src={dish.image ? `${api.defaults.baseURL}/files/${dish.image}` : `${defaultImage}` }/>
                         <div className="dados">
-                            <h1>braba</h1>
-                            <p>Rabanetes, folhas verdes e molho agridoce salpicados <br/> com gergelim. O pão naan dá um toque especial.</p>
+                            <h1>{dish.title}</h1>
+                            <p>{dish.description}</p>
                         
                             <div className="tags">
-                                <Tag title="alface"/>
-                                <Tag title="cebola"/>
-                                <Tag title="pepino"/>
-                                <Tag title="rabanete"/>
-                                <Tag title="tomate"/>
-                                <Tag title="pão naan"/>
+                                {
+                                    
+                                    dish.ingredients.length > 0 &&
+                                    dish.ingredients.map(tag => {
+                                        
+                                        <Tag
+                                            key={tag.id}
+                                            tit={tag.name}
+                                            
+                                        />
+                                    })
+                                    
+                                    
+                                }
+                            </div>
+
+                            <div className="addOrder">
+                                
+                                
+                                <div className='redButton'>
+                                    <Button onPress={handleNavigate} title="Editar prato"/>
+                                </div>
+                                
+                            </div>
+                                                    
+                        </div>
+                        </div>
+                        )
+                        :
+                        (
+                        <div className="dishSelected">
+                        <img src={dish.image ? `${api.defaults.baseURL}/files/${dish.image}` : `${defaultImage}` }/>
+                        <div className="dados">
+                            <h1>{dish.title}</h1>
+                            <p>{dish.description}</p>
+                        
+                            <div className="tags">
+                                {
+                                    
+                                    dish.ingredients.length > 0 &&
+                                    dish.ingredients.map(tag => {
+                                        
+                                        <Tag
+                                            key={tag.id}
+                                            tit={tag.name}
+                                            
+                                        />
+                                    })
+                                    
+                                    
+                                }
                             </div>
 
                             <div className="addOrder">
@@ -48,12 +145,17 @@ export function Dish({data}){
                             </div>
                                                     
                         </div>
-                    </div>
+                        </div>
+                        )
+                        
+
+                    }
                 
                 
                 
 
-            </Main>
+                </Main>
+            }
             <FooterStyles>
                 <Footer/>
 
