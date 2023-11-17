@@ -80,15 +80,16 @@ export function Dish(){
                             <div className="tags">
                                 {
                                     
-                                    dish.ingredients.length > 0 &&
-                                    dish.ingredients.map(tag => {
+                                    
+                                    
+                                    dish.ingredients.map(tag => (
                                         
                                         <Tag
                                             key={tag.id}
-                                            tit={tag.name}
+                                            title={tag.name}
                                             
                                         />
-                                    })
+                                    ))
                                     
                                     
                                 }

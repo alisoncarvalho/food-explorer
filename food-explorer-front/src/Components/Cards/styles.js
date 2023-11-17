@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
    min-width: 304px;
-   min-height:462px;
+   height:462px;
 
    display: flex;
    flex-direction: column;
@@ -11,13 +11,15 @@ export const Container = styled.div`
    position: relative;
    
    border: none;
-   background-color: pink;
-   /* background-color: ${({theme})=>theme.COLORS.DARK_200}; */
+   /* background-color: blue; */
+   background-color: ${({theme})=>theme.COLORS.DARK_200};
    border-radius: 8px;
    border: solid 1px ${({theme})=>theme.COLORS.DARK_400};
    padding:  24px;
 
    text-align: center;
+
+   
 
    h1{
       color: ${({theme})=> theme.COLORS.LIGHT_300};
@@ -32,6 +34,7 @@ export const Container = styled.div`
       color: ${({theme})=> theme.COLORS.CAKE_200};
       font-size: 32px;
       font-weight: 400;
+      margin-top: 15px;
    }
 
    img{
@@ -81,9 +84,39 @@ export const Container = styled.div`
       font-size: 24px;
       color: ${({theme})=> theme.COLORS.LIGHT_300};
       
+   } 
+
+   .edit{
+      position: absolute;
+      right: 18px;
+      top: 16px;
+
+      background: none;
+      border: none;
+
+      font-size: 24px;
+      color: ${({theme})=> theme.COLORS.LIGHT_300};
+      
+   } 
+
+   .adminCard{
+      
+      margin-top: 42px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      
+   }
+
+   .customerCard{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      
    }
    
-
 
    
 

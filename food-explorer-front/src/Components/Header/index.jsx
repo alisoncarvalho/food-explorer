@@ -10,11 +10,15 @@ import { USER_ROLES } from '../../utils/roles'
 import {useAuth} from "../../hooks/auth"
 import { useNavigate } from 'react-router-dom'
 
+
 export function Header({search}){
     const navigate = useNavigate()
-    function handleNavigate(){
+    
+    function handleNavigateToNewDish(){
         navigate("/newdish")
     }
+
+    
 
     const {user , signOut} = useAuth()
     const isAdmin = user.role == USER_ROLES.ADMIN
@@ -33,11 +37,18 @@ export function Header({search}){
                     </label>
                 </Search>
 
-                {   <RedButton>
-                        <Button className="buttonRed" onPress={handleNavigate} title={isAdmin ? "Novo prato" : `Pedidos (0)` } />
+                   <RedButton>
+                    
+                        {
+                            isAdmin ?                         
+                            <Button className="buttonRed" onPress={handleNavigateToNewDish} title="Novo prato"/>
+                            :
+                            <Button className="buttonRed"  title="Pedidos (0)"/>
+
+                        }
                         
                     </RedButton>
-                }
+                
 
 
                 

@@ -1,9 +1,10 @@
 import {Container , Main , Content , Banner} from './styles';
-import {Header} from '../../Components/Header'
-import {Footer} from '../../Components/Footer'
+import {Header} from '../../components/Header'
+import {Footer} from '../../components/Footer'
 import bannerImage from '../../assets/frutas.png'
-import {Cards} from '../../Components/Cards'
-import {MdKeyboardArrowLeft , MdKeyboardArrowRight} from 'react-icons/md'
+import {Cards} from '../../components/Cards'
+import {MdKeyboardArrowLeft ,MdDoNotDisturbAlt, MdKeyboardArrowRight} from 'react-icons/md'
+
 import defalutImageDish from '../../assets/images/camarao.png'
 
 import { useEffect, useState } from 'react';
@@ -101,27 +102,26 @@ export function Home(){
                                 <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                             </div>
                         </div>
-                                
-                                
-
-                                
+                               
                     </Banner>
                         
 
                     <Main>
                         <div className="category">
                             <div className="sides">
-                                <button ><MdKeyboardArrowLeft/></button> 
-                                <button ><MdKeyboardArrowRight/></button>
+                                {
+                                    meals.length <= 0 ? <></> : <>
+                                        <button ><MdKeyboardArrowLeft/></button> 
+                                        <button ><MdKeyboardArrowRight/></button>
+                                    </> 
+                                }
+                                
                             </div>
                                            
                             <h2 className='text'>Refeições</h2>
                             <div className="cards" /*ref={carousel}*/ >
                                 {
-                                    meals
-                                    
-                                    
-                                    
+                                  meals.length >0 ? meals : <h4><MdDoNotDisturbAlt/> Nada por aqui </h4> 
                                 }
                             </div>
                             
@@ -131,24 +131,45 @@ export function Home(){
 
                         <div className="category">
                             <div className="sides">
-                                <button ><MdKeyboardArrowLeft/></button> 
-                                <button ><MdKeyboardArrowRight/></button>
+                                
+                                {
+                                    desserts.length <= 0 ? <></> : <>
+                                        <button ><MdKeyboardArrowLeft/></button> 
+                                        <button ><MdKeyboardArrowRight/></button>
+                                    </>
+
+                                }
+                                    
+                                    
+                                
+                                    
+                            
                             </div>
                             <h2 className='text'>Sobremesas</h2>                
                             <div className="cards" >
-                            {desserts}
+                            {
+                                
+                                desserts.length >0 ? desserts : <h4><MdDoNotDisturbAlt/> Nada por aqui </h4>  
+                            }
                             </div>
                         </div>
 
 
                         <div className="category">
                         <div className="sides">
-                                <button><MdKeyboardArrowLeft/></button> 
-                                <button><MdKeyboardArrowRight/></button>
+                        {
+                                    beverages.length <= 0 ? <></> : <>
+                                        <button ><MdKeyboardArrowLeft/></button> 
+                                        <button ><MdKeyboardArrowRight/></button>
+                                    </>
+
+                                }
                             </div>
                             <h2 className='text'>Bebidas</h2>                
                             <div className="cards" >
-                                {beverages}
+                                {
+                                   (beverages.length > 0) ? beverages :<h4><MdDoNotDisturbAlt/> Nada por aqui </h4> 
+                                }
                             </div>
                         </div>
 

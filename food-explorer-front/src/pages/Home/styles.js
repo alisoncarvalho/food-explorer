@@ -49,13 +49,26 @@ export const Main = styled.div`
 
     .category{
         
+        min-height: 462px;
         position: relative;
         display: flex;
         flex-direction: column;
         padding-bottom:47px;
 
         
-        
+        h4{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >svg{
+                font-size: 80px;
+            }
+        }
 
         .text{
             padding: 0 24px;
@@ -74,7 +87,7 @@ export const Main = styled.div`
 
             padding: 0 30px;
             position: absolute;
-            top: 285px;
+            top: 250px;
             z-index: 1;
 
             button{
@@ -100,8 +113,7 @@ export const Main = styled.div`
         gap: 16px;
         overflow-x: auto;
 
-        background: linear-gradient(to left, transparent 0%, ${({ theme }) => theme.COLORS.BACKGROUND_900} 100% 0%, transparent 100%);
-
+        
         
         
         

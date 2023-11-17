@@ -14,7 +14,22 @@ import {useAuth} from '../../hooks/auth'
 import { USER_ROLES } from '../../utils/roles'
 
 
-export function Cards({ data  } ){
+export function Cards({ data , isFavorite = false } ){
+
+    const [dishAmount, setDishAmount] = useState(1)
+
+    function decrease() {
+        if (dishAmount > 1) {
+        setDishAmount((prevState) => prevState - 1)
+        }
+    }
+
+    function increase() {
+        setDishAmount((prevState) => prevState + 1)
+    }
+    
+
+    console.log(dishAmount)
 
     const {user} = useAuth()
     const isAdmin = user.role == USER_ROLES.ADMIN
@@ -32,19 +47,27 @@ export function Cards({ data  } ){
        
         <Container >
             {isAdmin ? 
-                (<div className="adminCard">
-                <button className='heart' onClick={handleEdit}><FiEdit2 /></button>
-                <img src={dishImage} alt="" />
+                (
+                    <div className="adminCard">
+                    <button className='edit' onClick={handleEdit}><FiEdit2 /></button>
+                    <img src={dishImage} alt="" />
 
-                <h1>{data.title}</h1>
-                <Link to={`/dish/${data.id}`}>
-                <p>{data.description}</p>
-                <h3>{data.price}</h3>
-                </Link>
-            </div>):
+                    <h1>{data.title}</h1>
+                    <Link to={`/dish/${data.id}`}>
+                    <p>{data.description}</p>
+                    <h3>{data.price}</h3>
+                    </Link>
+                    </div>
+                ):
 
             (<div className="customerCard">
-                <button className='heart'><IoMdHeartEmpty/></button>
+                <button className='heart'  >
+                    { isFavorite ? <IoMdHeart/> : <IoMdHeartEmpty/>}
+                    
+                    
+                    
+                    
+                </button>
                 <img src={dishImage} alt="" />
 
                 <h1>{data.title}</h1>
@@ -56,9 +79,9 @@ export function Cards({ data  } ){
                 
                 <div id='include'>
                     <div className='amount'>
-                        <button  className='button'><AiOutlineMinus/></button>
-                        <span>05</span>
-                        <button  className='button'><AiOutlinePlus/></button>
+                        <button  className='button' onClick={decrease}><AiOutlineMinus/></button>
+                        <span>{dishAmount}</span>
+                        <button  className='button' onClick={increase}><AiOutlinePlus/></button>
                     </div>
                     <Button title='incluir'/>
                 </div>
@@ -66,6 +89,12 @@ export function Cards({ data  } ){
             }
                 
         </Container>
+
+        
+
+           
+            
+                
 
     )
 }
