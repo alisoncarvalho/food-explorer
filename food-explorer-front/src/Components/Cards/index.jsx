@@ -14,9 +14,12 @@ import {useAuth} from '../../hooks/auth'
 import { USER_ROLES } from '../../utils/roles'
 
 
-export function Cards({ data , isFavorite = false } ){
+export function Cards({ data  } ){
+
+    
 
     const [dishAmount, setDishAmount] = useState(1)
+    const [isFavorite , setIsFavorite] = useState(false)
 
     function decrease() {
         if (dishAmount > 1) {
@@ -29,7 +32,9 @@ export function Cards({ data , isFavorite = false } ){
     }
     
 
-    console.log(dishAmount)
+    function handleFAvoriteDish(){
+        setIsFavorite(!isFavorite)
+    }
 
     const {user} = useAuth()
     const isAdmin = user.role == USER_ROLES.ADMIN
@@ -39,8 +44,10 @@ export function Cards({ data , isFavorite = false } ){
     const navigate = useNavigate()
 
     function handleEdit(){
-        navigate("/editdish")
+        navigate(`/editdish/${data.id}`)
     }
+
+    
     
     
     return(
@@ -61,7 +68,7 @@ export function Cards({ data , isFavorite = false } ){
                 ):
 
             (<div className="customerCard">
-                <button className='heart'  >
+                <button className='heart' onClick={handleFAvoriteDish}>
                     { isFavorite ? <IoMdHeart/> : <IoMdHeartEmpty/>}
                     
                     

@@ -20,12 +20,31 @@ export function Dish(){
     const isAdmin = user.role == USER_ROLES.ADMIN
 
     const [dish , setDish] = useState(null)
-    // const [ingredient , setIngredient ] = useState([])
+
+    const [dishAmount, setDishAmount] = useState(1)
+
+    function decrease() {
+        if (dishAmount > 1) {
+        setDishAmount((prevState) => prevState - 1)
+        }
+    }
+
+    function increase() {
+        setDishAmount((prevState) => prevState + 1)
+    }
+
+    function priceToInclude(){
+        String(dishAmount) * String(dish.price)
+    }
+
+    
+
+    
     const params = useParams()
     const navigate = useNavigate()
 
     function handleNavigate(){
-        navigate("/editdish")
+        navigate(`/editdish/${dish.id}`)
     }
 
 
@@ -46,18 +65,10 @@ export function Dish(){
     
     
 
-    // useEffect (()=>{
-    //     async function fetchIngredients(){
-    //         const response = await api.get(`/ingredients/${dish.id}`)
-    //         setIngredient(response.data)
-            
-    //     }
-    //     fetchIngredients()
-        
-        
-        
-        
-    // },[])
+   
+    
+
+    
     
     
     
@@ -134,13 +145,14 @@ export function Dish(){
 
                             <div className="addOrder">
                                 <div className='amount'>
-                                    <button className='background'><AiOutlineMinus/></button>
-                                    <span>01</span>
-                                    <button className='background'><AiOutlinePlus/></button>
+                                    <button className='background' onClick={decrease}><AiOutlineMinus/></button>
+                                    <span>{dishAmount}</span>
+                                    <button className='background' onClick={increase}><AiOutlinePlus/></button>
                                 </div>
                                 
                                 <div className='redButton'>
-                                    <Button  title="incluir - R$25,00"/>
+                                    {/* <Button  title={`incluir - ${(Number(dishAmount) * Number(dish.price))}`}/> */}
+                                    <Button  title={`incluir - ${dish.price}`}/>
                                 </div>
                                 
                             </div>

@@ -75,7 +75,10 @@ export const Main = styled.div`
         gap: 33px;
 
         .redButton{
-            width: 40%;
+            width: fit-content;
+            flex-wrap: nowrap;
+            
+
         }
     }
 

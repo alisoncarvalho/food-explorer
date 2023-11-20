@@ -136,7 +136,7 @@ export function NewDish(){
                         <div className="category">
                             <label className="label" htmlFor="category" >Categoria</label>
                             <select name="category" id="category" onChange={e => setCategory(e.target.value)}>
-                            <option value="selecionar categoria">Selecionar categoria</option>
+                                <option value="selecionar categoria">Selecionar categoria</option>
                                 <option value="refeições">Refeições</option>
                                 <option value="sobremesas">Sobremesas</option>
                                 <option value="bebidas">Bebidas</option>

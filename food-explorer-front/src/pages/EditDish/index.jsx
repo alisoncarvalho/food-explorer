@@ -16,18 +16,16 @@ import { Link } from "react-router-dom";
 export function EditDish(){
     const {user} = useAuth()
     const navigate = useNavigate()
+    const params = useParams()
 
-    const [dishImage , setDishImage] = useState(user.image)
+    const [dishImage , setDishImage] = useState("")
     const [dishImageFile , setDishImageFile] = useState(null)
 
     
     const [title, setTitle] = useState("")
-
-    const [selectedCategory, setSelectedCategory] = useState("")
-
+    const [category, setCategory] = useState("")
     const [ingredients , setIngredients] = useState([])
     const [newIngredients , setNewIngredients] = useState("")
-
     const [price, setPrice] = useState("")
     const [description, setDescription] = useState("")
    
@@ -48,13 +46,13 @@ export function EditDish(){
 
         fileUploadForm.append("image" , dishImageFile )
         fileUploadForm.append('title', title)
-        fileUploadForm.append('category', selectedCategory)
-        
+        fileUploadForm.append('category', category)
+        fileUploadForm.append('ingredients', JSON.stringify(ingredients))        
         fileUploadForm.append('price', price)
         fileUploadForm.append('description', description)
-
-        await api.put(`dishes/image`, fileUploadForm)
-        alert('Dish updated successfully!')
+        await api.put(`dishes/${params.id}`, fileUploadForm)
+        alert('Prato atualizado com sucesso!')
+        navigate("/")
     }
 
     function handleAddIngredient(){
@@ -66,9 +64,16 @@ export function EditDish(){
         setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted))
     }
 
-    async function editDish(){
-        await api.post(`dishes/${params.id}`)
+    async function handleRemoveDish(){
+        await api.delete(`/dishes/${params.id}`)
+
+        alert("Prato removido com sucesso!")
+        navigate("/")
+
     }
+    
+
+    
 
     
 
@@ -77,9 +82,9 @@ export function EditDish(){
             <Header />
             <Content>
                 <Form>
-                    <Link to="/">
-                        <a href="#"><IoIosArrowBack size={22}/> voltar</a>
-                    </Link>
+                    
+                    <a href="/"><IoIosArrowBack size={22}/> voltar</a>
+                    
                     <h1>Editar prato</h1>
 
                     <div className="firstline">
@@ -89,7 +94,7 @@ export function EditDish(){
                                     <Input type="file" id="image-file" onChange={handleChangeDishImage} />
                                         <span>
                                         <FiUpload size={24}/>
-                                        Selecione a imagem
+                                        {dishImage ? "Imagem selecionada" : "Selecione a imagem"}
                                     </span>
                                 </div>
                             </label>
@@ -100,7 +105,8 @@ export function EditDish(){
                         </div> 
                         <div className="category">
                             <label className="label" htmlFor="category" >Categoria</label>
-                            <select name="category" id="category">
+                            <select name="category" id="category" onChange={e => setCategory(e.target.value)}>
+                            <option value="selecionar categoria">Selecionar categoria</option>
                                 <option value="refeições">Refeições</option>
                                 <option value="sobremesas">Sobremesas</option>
                                 <option value="bebidas">Bebidas</option>
@@ -130,7 +136,7 @@ export function EditDish(){
                         </div>
                         <div className="price">
                             <label className="label" htmlFor="price"> Preço</label>
-                        <   Input id="price" type="money" placeholder="R$ 25,00"/>
+                        <   Input id="price" type="money" placeholder="R$ 25,00" onChange={e => setPrice(e.target.value)}/>
                         </div>
                         
                     </div>
@@ -142,7 +148,10 @@ export function EditDish(){
                         />
                     <div className="buttons">
                         <div className="button1">
-                            <Button title="Excluir prato" />
+                            <Button 
+                                title="Excluir prato"
+                                onPress={handleRemoveDish}
+                            />
                         </div>
                         <div className="button2">
                             <Button title="Salvar alterações" onPress={handleUpdateDish} />

@@ -18,4 +18,6 @@ export const Container = styled.button`
     gap: 5px;
     justify-content: center;
 
+    padding: 24px;
+
 `;

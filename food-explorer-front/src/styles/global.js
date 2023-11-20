@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export default createGlobalStyle`
     * {
         margin: 0;
@@ -9,6 +10,8 @@ export default createGlobalStyle`
 
     :root {
         font-size: 62.5%;
+
+       
     }
 
     body {
@@ -23,31 +26,14 @@ export default createGlobalStyle`
             border-radius: 9999px;
         }
 
-        *::-webkit-scrollbar-corner {
-            background-color: transparent;
-        }
-
-        *::-webkit-scrollbar-thumb {
-            width: 6px;
-            background-color: transparent;
-            border-radius: 80px;
-            box-shadow: inset 0 0 0px 6px ${({ theme }) => theme.COLORS.BLUE};
-            border: solid 10px transparent;
-        }
-
         
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-        }
 
          
     }
 
     body, input, textarea {
         font-family: 'Roboto', sans-serif;
-        font-size: 16px;
+        font-size: 1.6rem;
         outline: none;
     }
 
@@ -65,6 +51,6 @@ export default createGlobalStyle`
     }
 
     button:hover, a:hover {
-        filter: brightness(0.9);
+        filter: brightness(0.8);
     }
 `;

@@ -11,7 +11,7 @@ import {useAuth} from "../../hooks/auth"
 import { useNavigate } from 'react-router-dom'
 
 
-export function Header({search}){
+export function Header({search , dishAmount}){
     const navigate = useNavigate()
     
     function handleNavigateToNewDish(){
@@ -43,7 +43,7 @@ export function Header({search}){
                             isAdmin ?                         
                             <Button className="buttonRed" onPress={handleNavigateToNewDish} title="Novo prato"/>
                             :
-                            <Button className="buttonRed"  title="Pedidos (0)"/>
+                            <Button className="buttonRed"  title={`Pedidos`} />
 
                         }
                         
