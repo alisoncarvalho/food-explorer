@@ -80,13 +80,15 @@ export function NewDish(){
             return alert("Ingrediente não adicionado")
         }
 
+        const formattedPrice = parseFloat(price.replace(',', '.'))
+
         const fileUploadForm = new FormData()
 
         fileUploadForm.append("image" , dishImageFile)
         fileUploadForm.append('title', title)
         fileUploadForm.append('category', category)
         fileUploadForm.append('ingredients', JSON.stringify(ingredients))
-        fileUploadForm.append('price', price)
+        fileUploadForm.append('price', formattedPrice)
         fileUploadForm.append('description', description)
 
         
@@ -202,3 +204,5 @@ export function NewDish(){
         </Container>
     )
 }
+
+

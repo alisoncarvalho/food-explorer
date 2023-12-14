@@ -33,7 +33,7 @@ export function SignIn(){
             </div>
             
             <div className="block">
-                <h1>Faça login</h1>
+                <h1>Faça o login</h1>
                 <Form>
                     <div className="input-wrapper">
                         <label  htmlFor="email">Email</label>

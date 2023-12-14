@@ -1,23 +1,33 @@
-import {Container , Main , Content , Banner} from './styles';
+import {Container , Main , Content , Banner , Slogan , Background} from './styles';
 import {Header} from '../../components/Header'
 import {Footer} from '../../components/Footer'
 import bannerImage from '../../assets/frutas.png'
 import {Cards} from '../../components/Cards'
 import {MdKeyboardArrowLeft ,MdDoNotDisturbAlt, MdKeyboardArrowRight} from 'react-icons/md'
+import { Carousel } from '../../Components/Carousel';
 
 import defalutImageDish from '../../assets/images/camarao.png'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState , useRef } from 'react';
 import { api } from '../../services/api';
 
 
 
-
-
-
-
-
 export function Home(){
+
+    const carousel = useRef(null);
+
+    function handleRightCLick(e){
+        e.preventDefault();
+        console.log( carousel.current.offsetWidth)
+        carousel.current.scrollLeft += carousel.current.offsetWidth
+    }
+
+    function handleLeftCLick(e){
+        e.preventDefault();
+        console.log( carousel.current.offsetWidth)
+        carousel.current.scrollLeft -= carousel.current.offsetWidth
+    }
     
     
     const [search, setSearch] = useState("")
@@ -25,8 +35,6 @@ export function Home(){
     const [meals, setMeals] = useState([])
     const [beverages, setBeverages] = useState([])
     const [desserts, setDesserts] = useState([])
-    
-    
     
     
     
@@ -81,7 +89,6 @@ export function Home(){
         }
         fetchDishes()
 
-        
 
 
     },[search])
@@ -93,87 +100,61 @@ export function Home(){
                 <Content>
                     <Banner>
                         
-                        <div className="img">
-                            <img src={bannerImage} alt="" />
-                        </div>
-                        <div className="block">
+                        
+                        <img src={bannerImage} alt="" />
+                        
+                        <Slogan>
                             <div className="text">
                                 <h1>Sabores inigualáveis</h1>
                                 <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                             </div>
-                        </div>
+
+
+                        </Slogan>
+
+                        <Background/>
+                        
+                            
+                        
                                
                     </Banner>
+
+
                         
 
                     <Main>
                         <div className="category">
-                            <div className="sides">
-                                {
-                                    meals.length <= 0 ? <></> : <>
-                                        <button ><MdKeyboardArrowLeft/></button> 
-                                        <button ><MdKeyboardArrowRight/></button>
-                                    </> 
-                                }
-                                
-                            </div>
-                                           
-                            <h2 className='text'>Refeições</h2>
-                            <div className="cards" /*ref={carousel}*/ >
-                                {
-                                  meals.length >0 ? meals : <h4><MdDoNotDisturbAlt/> Nada por aqui </h4> 
-                                }
-                            </div>
-                            
-                                    
-                            
-                        </div>
-
-                        <div className="category">
-                            <div className="sides">
-                                
-                                {
-                                    desserts.length <= 0 ? <></> : <>
-                                        <button ><MdKeyboardArrowLeft/></button> 
-                                        <button ><MdKeyboardArrowRight/></button>
-                                    </>
-
-                                }
-                                    
-                                    
-                                
-                                    
-                            
-                            </div>
-                            <h2 className='text'>Sobremesas</h2>                
-                            <div className="cards" >
-                            {
-                                
-                                desserts.length >0 ? desserts : <h4><MdDoNotDisturbAlt/> Nada por aqui </h4>  
-                            }
-                            </div>
-                        </div>
-
-
-                        <div className="category">
-                        <div className="sides">
+                            <h3>Refeições</h3>
                         {
-                                    beverages.length <= 0 ? <></> : <>
-                                        <button ><MdKeyboardArrowLeft/></button> 
-                                        <button ><MdKeyboardArrowRight/></button>
-                                    </>
-
-                                }
-                            </div>
-                            <h2 className='text'>Bebidas</h2>                
-                            <div className="cards" >
-                                {
-                                   (beverages.length > 0) ? beverages :<h4><MdDoNotDisturbAlt/> Nada por aqui </h4> 
-                                }
-                            </div>
+                            meals.length > 0 ? <Carousel content={meals}></Carousel> 
+                            :
+                            <h4><MdDoNotDisturbAlt/> Nada por aqui </h4>
+                        }
                         </div>
 
+                        <div className="category">
+                            <h3>Sobremesas</h3>
+                        {
+                            desserts.length > 0 ? <Carousel content={desserts}></Carousel> 
+                            :
+                            <h4><MdDoNotDisturbAlt/> Nada por aqui </h4>
+                        }
+                        </div>
 
+                        <div className="category">
+                            <h3>Bebidas</h3>
+                        {
+                            beverages.length > 0 ? <Carousel content={beverages}></Carousel>
+                            :
+                            <h4><MdDoNotDisturbAlt/> Nada por aqui </h4> 
+                        }
+                        </div>
+                        
+                        
+                            
+                        
+                            
+                        
                     </Main>
                     
                     
@@ -182,17 +163,25 @@ export function Home(){
         </Container>
     )
 }
+                                
+                                    
+                                
+                            
 
-// const carousel = useRef(null);
+                        
+                            
 
-    // function handleRightCLick(e){
-    //     e.preventDefault();
-    //     console.log( carousel.current.offsetWidth)
-    //     carousel.current.scrollLeft += carousel.current.offsetWidth
-    // }
 
-    // function handleLeftCLick(e){
-    //     e.preventDefault();
-    //     console.log( carousel.current.offsetWidth)
-    //     carousel.current.scrollLeft -= carousel.current.offsetWidth
-    // }
+
+                        
+
+                            
+                                
+                            
+
+
+
+
+
+
+

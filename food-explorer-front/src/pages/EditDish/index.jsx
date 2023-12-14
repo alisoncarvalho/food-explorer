@@ -44,6 +44,12 @@ export function EditDish(){
     async function handleUpdateDish(){
         const fileUploadForm = new FormData()
 
+        if(!dishImage){
+            return alert("selecione uma foto do prato editado")
+        }        
+        
+        
+
         fileUploadForm.append("image" , dishImageFile )
         fileUploadForm.append('title', title)
         fileUploadForm.append('category', category)
@@ -152,6 +158,7 @@ export function EditDish(){
                                 title="Excluir prato"
                                 onPress={handleRemoveDish}
                             />
+                            
                         </div>
                         <div className="button2">
                             <Button title="Salvar alterações" onPress={handleUpdateDish} />

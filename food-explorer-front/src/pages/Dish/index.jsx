@@ -1,4 +1,4 @@
-import {Container , Main ,  FooterStyles   } from './styles'
+import {Container , Main    } from './styles'
 import { Header } from '../../Components/Header'
 import { Footer } from '../../Components/Footer'
 import {IoIosArrowBack} from 'react-icons/io'
@@ -40,6 +40,8 @@ export function Dish(){
     
 
     
+
+    
     const params = useParams()
     const navigate = useNavigate()
 
@@ -64,7 +66,7 @@ export function Dish(){
 
     
     
-
+    
    
     
 
@@ -83,39 +85,39 @@ export function Dish(){
                     { isAdmin ? 
                         (
                         <div className="dishSelected">
-                        <img src={dish.image ? `${api.defaults.baseURL}/files/${dish.image}` : `${defaultImage}` }/>
-                        <div className="dados">
-                            <h1>{dish.title}</h1>
-                            <p>{dish.description}</p>
+                            <img src={dish.image ? `${api.defaults.baseURL}/files/${dish.image}` : `${defaultImage}` }/>
+                            <div className="dados">
+                                <h1>{dish.title}</h1>
+                                <p>{dish.description}</p>
                         
-                            <div className="tags">
-                                {
-                                    
-                                    
-                                    
-                                    dish.ingredients.map(tag => (
+                                <div className="tags">
+                                    {
                                         
-                                        <Tag
-                                            key={tag.id}
-                                            title={tag.name}
+                                        
+                                        
+                                        dish.ingredients.map(tag => (
                                             
-                                        />
-                                    ))
-                                    
-                                    
-                                }
-                            </div>
+                                            <Tag
+                                                key={tag.id}
+                                                title={tag.name}
+                                                
+                                            />
+                                        ))
+                                        
+                                        
+                                    }
+                                </div>
 
-                            <div className="addOrder">
+                                
                                 
                                 
                                 <div className='redButton'>
                                     <Button onPress={handleNavigate} title="Editar prato"/>
                                 </div>
                                 
-                            </div>
+                                
                                                     
-                        </div>
+                            </div>
                         </div>
                         )
                         :
@@ -151,8 +153,14 @@ export function Dish(){
                                 </div>
                                 
                                 <div className='redButton'>
-                                    {/* <Button  title={`incluir - ${(Number(dishAmount) * Number(dish.price))}`}/> */}
-                                    <Button  title={`incluir - ${dish.price}`}/>
+                                    <Button  
+                                        title={(Number(dish.price) * Number(dishAmount))
+                                            .toFixed(2)
+                                            .toString()
+                                            .replace('.', ',')}
+                                    />
+                                    
+                                        
                                 </div>
                                 
                             </div>
@@ -169,10 +177,10 @@ export function Dish(){
 
                 </Main>
             }
-            <FooterStyles>
-                <Footer/>
+            
+            <Footer/>
 
-            </FooterStyles>
+            
         </Container>
     )
 }

@@ -18,14 +18,44 @@ export function Header({search , dishAmount}){
         navigate("/newdish")
     }
 
-    
+    function handleNavigateToMenu(){
+        navigate("/menu")
+    }    
 
     const {user , signOut} = useAuth()
     const isAdmin = user.role == USER_ROLES.ADMIN
     return(
         <Container>
             <Content>
-                <Logo />
+                
+                    {isAdmin? 
+                    (<div className="headerAdmin">
+                        <div className="mobile">
+                            <button onClick={handleNavigateToMenu}>
+                                <AiOutlineMenu/>
+                            </button>
+                        </div>
+                        <div className="logo">
+                            <Logo/>
+                        </div>
+                    </div>):
+                    (
+                    <div className='header'>
+                        <div className="mobile">
+                            <button onClick={handleNavigateToMenu}>
+                                <AiOutlineMenu/>
+                            </button>
+                            <Logo className="logo"/>
+                            <button>
+                                <TbReceipt/>
+                            </button>
+                        </div>
+                    </div>
+                    )
+                    }
+                    
+                
+                
                 <Search>
                     <label htmlFor="search">
                     <Input 

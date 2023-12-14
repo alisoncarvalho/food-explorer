@@ -2,6 +2,7 @@ import { useAuth } from "../../hooks/auth";
 import { USER_ROLES } from "../../utils/roles";
 import { Container , Content } from "./styles";
 
+
 export function Logo(){
     const {user} = useAuth()
     const isAdmin = user.role == USER_ROLES.ADMIN
@@ -21,9 +22,9 @@ export function Logo(){
                             <div className="h1">
                                     <h1>food explorer</h1>
                             </div>
-                            <div className="h2">
+                            
                             <h2>admin</h2>
-                        </div>
+                            
                         </div>) 
                         :          
                         (<div className="logo">

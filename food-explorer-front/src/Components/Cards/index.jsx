@@ -62,7 +62,7 @@ export function Cards({ data  } ){
                     <h1>{data.title}</h1>
                     <Link to={`/dish/${data.id}`}>
                     <p>{data.description}</p>
-                    <h3>{data.price}</h3>
+                    <h3>R$ {(data.price).toFixed(2).replace('.', ',')}</h3>
                     </Link>
                     </div>
                 ):
@@ -80,17 +80,21 @@ export function Cards({ data  } ){
                 <h1>{data.title}</h1>
                 <Link to={`/dish/${data.id}`}>
                 <p>{data.description}</p>
-                <h3>{data.price}</h3>
+                <h3>R$ {(data.price).toFixed(2).replace('.', ',')}</h3>
                 </Link>
             
                 
                 <div id='include'>
                     <div className='amount'>
                         <button  className='button' onClick={decrease}><AiOutlineMinus/></button>
-                        <span>{dishAmount}</span>
+                        <span>{dishAmount.toString().padStart(2, "0")}</span>
                         <button  className='button' onClick={increase}><AiOutlinePlus/></button>
                     </div>
-                    <Button title='incluir'/>
+                    
+                    <div className="redButton">
+                        <Button  title='incluir'/>
+
+                    </div>
                 </div>
             </div>)
             }

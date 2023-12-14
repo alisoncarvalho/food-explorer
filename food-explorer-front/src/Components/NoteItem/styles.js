@@ -6,6 +6,7 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: row;
+    width:max-content;
     
 
     
@@ -35,7 +36,12 @@ export const Container = styled.div`
     
     >input{
         height:32px; 
-        width:100%;
+        
+        width: ${($isnew) => $isnew && '100px'};
+        background: none;
+        border: none;
+        outline: none;
+
         
         
         padding: 10px 16px;
