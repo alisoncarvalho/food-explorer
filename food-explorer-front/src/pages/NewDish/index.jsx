@@ -36,10 +36,6 @@ export function NewDish(){
         
         const imagePreview = URL.createObjectURL(file)
         setDishImage(imagePreview) 
-        
-        
-        
-        
     }
 
     function handleAddIngredient(){
@@ -52,10 +48,6 @@ export function NewDish(){
     }
 
     async function handleNewDish(){
-
-        
-        
-        
         if(!title){
             return alert("É obrigatório informar o nome do prato.")
         }
@@ -91,15 +83,11 @@ export function NewDish(){
         fileUploadForm.append('price', formattedPrice)
         fileUploadForm.append('description', description)
 
-        
-
         await api.post("/dishes" , fileUploadForm)
-            
-        
+
         alert("Prato criado com sucesso")
         navigate("/")
-        
-        
+
     }
 
     return(
@@ -111,7 +99,6 @@ export function NewDish(){
                         <a href="#"><IoIosArrowBack size={22}/> voltar</a>
                     </Link>
                     <h1>Novo prato</h1>
-                    
                     <div className="firstline">
                         <div className="labelImage" >
                             <label  htmlFor="image-file" >Imagem do prato
@@ -119,7 +106,6 @@ export function NewDish(){
                                     <Input type="file" id="image-file" onChange={handleChangeDishImage} />
                                     <span>
                                         <FiUpload size={24}/>
-                                        
                                         {dishImage ? "Imagem selecionada" : "Selecione a imagem"}
                                     </span>
                                 </div>
@@ -145,12 +131,10 @@ export function NewDish(){
                             </select>
                         </div>
                     </div>
-
                     <div className="secondLine">
                         <div className="ingredients">
                             <label className="label" >Ingredientes</label>
                             <div className="tagsBox">
-                                
                                 <div className="tags">
                                 {
                                         ingredients.map((ingredient , index) => (
@@ -158,9 +142,7 @@ export function NewDish(){
                                             key={String(index)}
                                             value={ingredient}
                                             onClick={()=>{handleRemoveIngredient(ingredient)}}
-                                        
                                         />
-
                                         ))
                                     }
                                     <NoteItem 
@@ -181,28 +163,18 @@ export function NewDish(){
                         onChange={e => setPrice(e.target.value)}
                         />
                         </div>
-                        
                     </div>
-                    
                     <label className="label" > Descrição </label>
                         <TextArea
                             placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
                             onChange={e => setDescription(e.target.value)} 
-                            
                         />
                     <div className="button">
                         <Button className="button" title="Criar prato" onPress={handleNewDish}/>
                     </div>    
-                    
-
-                    
-                    
                 </Form>
             </Content>
-            
             <Footer/>
         </Container>
     )
 }
-
-

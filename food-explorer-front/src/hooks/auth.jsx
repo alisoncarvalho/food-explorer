@@ -17,9 +17,6 @@ function AuthProvider({children}){
 
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`
             setData({user , token})
-            
-            
-        
         } catch (error){
             if(error.message){
                 alert(error.response.data.message)
@@ -34,8 +31,6 @@ function AuthProvider({children}){
         localStorage.removeItem("@foodexplorer:user")
         setData({})
     }
-
-
 
     useEffect(()=> {
         const token = localStorage.getItem("@foodexplorer:token")
@@ -58,7 +53,6 @@ function useAuth(){
     const context = useContext(AuthContext)
     return context;
 }
-
 
 export {
     AuthProvider,

@@ -20,18 +20,12 @@ export function EditDish(){
 
     const [dishImage , setDishImage] = useState("")
     const [dishImageFile , setDishImageFile] = useState(null)
-
-    
     const [title, setTitle] = useState("")
     const [category, setCategory] = useState("")
     const [ingredients , setIngredients] = useState([])
     const [newIngredients , setNewIngredients] = useState("")
     const [price, setPrice] = useState("")
     const [description, setDescription] = useState("")
-   
-    
-
-    
 
     function handleChangeDishImage (event) {
         const file = event.target.files[0]
@@ -46,9 +40,7 @@ export function EditDish(){
 
         if(!dishImage){
             return alert("selecione uma foto do prato editado")
-        }        
-        
-        
+        } 
 
         fileUploadForm.append("image" , dishImageFile )
         fileUploadForm.append('title', title)
@@ -75,24 +67,15 @@ export function EditDish(){
 
         alert("Prato removido com sucesso!")
         navigate("/")
-
     }
-    
-
-    
-
-    
 
     return(
         <Container>
             <Header />
             <Content>
                 <Form>
-                    
                     <a href="/"><IoIosArrowBack size={22}/> voltar</a>
-                    
                     <h1>Editar prato</h1>
-
                     <div className="firstline">
                         <div className="labelImage" >
                             <label  htmlFor="image-file" >Imagem do prato
@@ -119,7 +102,6 @@ export function EditDish(){
                             </select>
                         </div>
                     </div>
-
                     <div className="secondLine">
                         <div className="ingredients">
                             <label className="label" >Ingredientes</label>
@@ -131,9 +113,7 @@ export function EditDish(){
                                             key={String(index)}
                                             value={ingredient}
                                             onClick={()=>{handleRemoveIngredient(ingredient)}}
-                                        
                                         />
-
                                         ))
                                     }
                                     <NoteItem isNew placeholder="Adicionar" onChange={e => setNewIngredients(e.target.value)} value={newIngredients} onClick={handleAddIngredient}/>
@@ -144,34 +124,25 @@ export function EditDish(){
                             <label className="label" htmlFor="price"> Preço</label>
                         <   Input id="price" type="money" placeholder="R$ 25,00" onChange={e => setPrice(e.target.value)}/>
                         </div>
-                        
                     </div>
-                    
                     <label className="label" > Descrição </label>
-                        <TextArea
+                    <TextArea
                         placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
                         onChange={e => setDescription(e.target.value)}
-                        />
+                    />
                     <div className="buttons">
                         <div className="button1">
                             <Button 
                                 title="Excluir prato"
                                 onPress={handleRemoveDish}
                             />
-                            
                         </div>
                         <div className="button2">
                             <Button title="Salvar alterações" onPress={handleUpdateDish} />
                         </div>
                     </div>
-                    
-                    
-
-                    
-                    
                 </Form>
             </Content>
-            
             <Footer/>
         </Container>
     )

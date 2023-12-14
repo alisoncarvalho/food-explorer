@@ -1,15 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-    
-
     display: flex;
     flex-direction: row;
     width:max-content;
-    
-
-    
 
     background-color: ${({theme , $isnew})=> $isnew ? "transparent" : theme.COLORS.LIGHT_600 };
     color: ${({theme , $isnew})=> $isnew ? theme.COLORS.LIGHT_500 : theme.COLORS.LIGHT_100 };
@@ -18,13 +12,10 @@ export const Container = styled.div`
     padding-right: 16px;
     border-radius:10px;
 
-    
-
     >button{
         border:none;
         background:none;
     }
-
 
     .button-delete{
         color: ${({theme})=>theme.COLORS.LIGHT_100};
@@ -42,14 +33,7 @@ export const Container = styled.div`
         border: none;
         outline: none;
 
-        
-        
         padding: 10px 16px;
-        
-        
-        
-        
-
 
         color:${({theme})=> theme.COLORS.LIGHT_100 };
         background: transparent;
@@ -57,20 +41,12 @@ export const Container = styled.div`
         border:none;
 
         &::placeholder{
-            
             color: ${({theme})=>theme.COLORS.LIGHT_500 };
         }
 
         &:focus{
-        box-shadow: 0 0 0 0;
-        outline: 0;
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
     }
-        
-    }
-
-    
-
-
-
-
 `;

@@ -16,26 +16,6 @@ import { USER_ROLES } from '../../utils/roles'
 
 export function Cards({ data  } ){
 
-    
-
-    const [dishAmount, setDishAmount] = useState(1)
-    const [isFavorite , setIsFavorite] = useState(false)
-
-    function decrease() {
-        if (dishAmount > 1) {
-        setDishAmount((prevState) => prevState - 1)
-        }
-    }
-
-    function increase() {
-        setDishAmount((prevState) => prevState + 1)
-    }
-    
-
-    function handleFAvoriteDish(){
-        setIsFavorite(!isFavorite)
-    }
-
     const {user} = useAuth()
     const isAdmin = user.role == USER_ROLES.ADMIN
 
@@ -43,13 +23,30 @@ export function Cards({ data  } ){
     
     const navigate = useNavigate()
 
+    const [dishAmount, setDishAmount] = useState(1)
+    const [isFavorite , setIsFavorite] = useState(false)
+    
+    
+
+
+    function decrease() {
+        if (dishAmount > 1) {
+        setDishAmount((prevState) => prevState - 1)
+        }
+    }
+    
+    function increase() {
+        setDishAmount((prevState) => prevState + 1)
+    }
+    
+    function handleFAvoriteDish(){
+        setIsFavorite(!isFavorite)
+    }
+
     function handleEdit(){
         navigate(`/editdish/${data.id}`)
     }
 
-    
-    
-    
     return(
        
         <Container >
@@ -58,48 +55,53 @@ export function Cards({ data  } ){
                     <div className="adminCard">
                     <button className='edit' onClick={handleEdit}><FiEdit2 /></button>
                     <img src={dishImage} alt="" />
-
                     <h1>{data.title}</h1>
                     <Link to={`/dish/${data.id}`}>
                     <p>{data.description}</p>
                     <h3>R$ {(data.price).toFixed(2).replace('.', ',')}</h3>
                     </Link>
                     </div>
-                ):
+                )
+                :
 
-            (<div className="customerCard">
-                <button className='heart' onClick={handleFAvoriteDish}>
-                    { isFavorite ? <IoMdHeart/> : <IoMdHeartEmpty/>}
-                    
-                    
-                    
-                    
-                </button>
-                <img src={dishImage} alt="" />
 
-                <h1>{data.title}</h1>
-                <Link to={`/dish/${data.id}`}>
-                <p>{data.description}</p>
-                <h3>R$ {(data.price).toFixed(2).replace('.', ',')}</h3>
-                </Link>
-            
-                
-                <div id='include'>
-                    <div className='amount'>
-                        <button  className='button' onClick={decrease}><AiOutlineMinus/></button>
-                        <span>{dishAmount.toString().padStart(2, "0")}</span>
-                        <button  className='button' onClick={increase}><AiOutlinePlus/></button>
+                (
+                    <div className="customerCard">
+                        <button className='heart' onClick={handleFAvoriteDish}>
+                            { isFavorite ? <IoMdHeart/> : <IoMdHeartEmpty/>}
+                        </button>
+                        <img src={dishImage} alt="" />
+                        <h1>{data.title}</h1>
+                        <Link to={`/dish/${data.id}`}>
+                        <p>{data.description}</p>
+                        <h3>R$ {(data.price).toFixed(2).replace('.', ',')}</h3>
+                        </Link>
+                        <div id='include'>
+                            <div className='amount'>
+                                <button  className='button' onClick={decrease}><AiOutlineMinus/></button>
+                                <span>{dishAmount.toString().padStart(2, "0")}</span>
+                                <button  className='button' onClick={increase}><AiOutlinePlus/></button>
+                            </div>
+                            
+                            <div className="redButton">
+                                <Button  title='incluir'/>
+
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div className="redButton">
-                        <Button  title='incluir'/>
-
-                    </div>
-                </div>
-            </div>)
+                )
             }
-                
         </Container>
+    )
+}
+
+                            
+                            
+                            
+                            
+                    
+                        
+                
 
         
 
@@ -107,6 +109,10 @@ export function Cards({ data  } ){
             
                 
 
-    )
-}
+
+
+
+    
+    
+    
         

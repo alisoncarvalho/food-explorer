@@ -8,10 +8,7 @@ export const Container = styled.div`
     background-color: ${({theme})=>theme.COLORS.DARK_900};
     color: ${({theme})=>theme.COLORS.LIGHT_500};
     border-radius: 5px;
-    padding: 14px 12px  ;
-    
-
-
+    padding: 14px 12px;
 
     >input{
         width:100%;
@@ -23,15 +20,9 @@ export const Container = styled.div`
         border: none;
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
-        font-size: 16px;
-
-        
-
-        
-
-        
-        
+        font-size: 16px;   
     }
+    
     input:focus {
         box-shadow: 0 0 0 0;
         outline: 0;

@@ -30,26 +30,22 @@ export function SignIn(){
                     <path d="M21.5706 0.216553L42.9737 12.0919V35.8426L21.5706 47.7179L0.167517 35.8426V12.0919L21.5706 0.216553Z" fill="#065E7C"/>
                 </svg>
                 <p>food explorer</p>
-            </div>
-            
+            </div>            
             <div className="block">
                 <h1>Faça o login</h1>
                 <Form>
                     <div className="input-wrapper">
                         <label  htmlFor="email">Email</label>
                         <Input  id="email" placeholder="Seu email" type="email" onChange={e => setEmail(e.target.value)} />
-                    </div>
-                    
+                    </div>                    
                     <div className="input-wrapper">
                         <label  htmlFor="password">Senha</label>
                         <Input id="password" placeholder="Sua senha" type="password" onChange={e => setPassword(e.target.value)} />
-                    </div>
-                    
+                    </div>                    
                     <Button title="Entrar" onPress={handleSignIn}/>
                     <Link to="/register">Criar conta</Link>
                 </Form>
-            </div>
-            
+            </div>            
         </Container>
     )
 }

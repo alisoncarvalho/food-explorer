@@ -6,11 +6,6 @@ import {Home} from "../Pages/Home"
 import {NotFound} from "../Pages/NotFound"
 import {Menu} from "../Pages/Menu"
 
-
-
-
-
-
 export function CustomerRoutes(){
     return(
         <Routes>
@@ -18,8 +13,6 @@ export function CustomerRoutes(){
             <Route path="/dish/:id" element ={<Dish/>} />
             <Route path="/menu" element={<Menu/>} />
             <Route path="*" element ={<NotFound/>} />
-            
-
         </Routes>
     )
 }

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.button`
    
-    height: 48px;
     width: 100%;
+    height: 48px;
     background-color: ${({theme})=>theme.COLORS.TOMATO_100};
     border: none;
     border-radius: 5px;

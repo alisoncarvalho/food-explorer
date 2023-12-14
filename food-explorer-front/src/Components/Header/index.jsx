@@ -28,34 +28,36 @@ export function Header({search , dishAmount}){
         <Container>
             <Content>
                 
-                    {isAdmin? 
-                    (<div className="headerAdmin">
-                        <div className="mobile">
-                            <button onClick={handleNavigateToMenu}>
-                                <AiOutlineMenu/>
-                            </button>
-                        </div>
-                        <div className="logo">
-                            <Logo/>
-                        </div>
-                    </div>):
-                    (
-                    <div className='header'>
-                        <div className="mobile">
-                            <button onClick={handleNavigateToMenu}>
-                                <AiOutlineMenu/>
-                            </button>
-                            <Logo className="logo"/>
-                            <button>
-                                <TbReceipt/>
-                            </button>
-                        </div>
-                    </div>
-                    )
+                    {
+                        isAdmin? 
+                        (
+                            <div className="headerAdmin">
+                                <div className="mobile">
+                                    <button onClick={handleNavigateToMenu}>
+                                        <AiOutlineMenu/>
+                                    </button>
+                                </div>
+                                <div className="logo">
+                                    <Logo/>
+                                </div>
+                            </div>
+                        )
+                        :
+                        (
+                            <div className='header'>
+                                <div className="mobile">
+                                    <button onClick={handleNavigateToMenu}>
+                                        <AiOutlineMenu/>
+                                    </button>
+                                    <Logo className="logo"/>
+                                    <button>
+                                        <TbReceipt/>
+                                    </button>
+                                </div>
+                            </div>
+                        )
                     }
                     
-                
-                
                 <Search>
                     <label htmlFor="search">
                     <Input 
@@ -66,30 +68,32 @@ export function Header({search , dishAmount}){
                     />
                     </label>
                 </Search>
-
-                   <RedButton>
-                    
-                        {
-                            isAdmin ?                         
-                            <Button className="buttonRed" onPress={handleNavigateToNewDish} title="Novo prato"/>
-                            :
-                            <Button className="buttonRed"  title={`Pedidos`} />
-
-                        }
-                        
-                    </RedButton>
                 
-
-
+                <RedButton>
+                    {
+                        isAdmin ?                         
+                        <Button className="buttonRed" onPress={handleNavigateToNewDish} title="Novo prato"/>
+                        :
+                        <Button className="buttonRed"  title={`Pedidos`} />
+                    }
+                </RedButton>
                 
                 <Exit>
-                <a href="/" onClick={signOut}>
-                    <RxExit/>
-                </a>
+                    <a href="/" onClick={signOut}>
+                        <RxExit/>
+                    </a>
                 </Exit>
-                
-                    
+
             </Content>
         </Container>
     )
 }
+                    
+                
+
+                
+
+
+                
+                
+                    

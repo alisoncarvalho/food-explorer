@@ -1,4 +1,3 @@
-
 import { Children } from "react"
 import { Container} from "./styles"
 
@@ -9,7 +8,7 @@ export function Section({title , children }){
                 {title}
             </label>
             <main>
-                {children}
+                {Children}
             </main>
         </Container>
     )

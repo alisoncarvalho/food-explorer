@@ -15,16 +15,12 @@ export function Menu(){
     const isAdmin = user.role == USER_ROLES.ADMIN
     const navigate = useNavigate()
 
-    
-
     return(
         <Container>
             <HeaderMenu/>
             {
                 isAdmin ?
                 <Content>
-                    
-                        
                         <Main>
                             <Input icon={BsSearch } placeholder="Busque por pratos ou ingredientes"/>
                             <div className="itens">
@@ -35,27 +31,17 @@ export function Menu(){
                             </div>
                             
                         </Main>
-            
-                        
-                    
-                    
                 </Content>
                 :
                 <Content>
-                    
                     <Main>
                         <Input icon={BsSearch } placeholder="Busque por pratos ou ingredientes"/>
                         <a onClick={signOut} href="/">Sair</a>
                         <div id="line"></div>
                     </Main>
-            
-                    
                 </Content>
-
-            
             }
             <div className="footer">
-            
                 <Footer/>
             </div>       
         </Container>

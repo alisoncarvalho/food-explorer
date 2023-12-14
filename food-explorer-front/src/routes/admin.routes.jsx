@@ -6,10 +6,6 @@ import {EditDish} from "../Pages/EditDish"
 import {Home} from "../Pages/Home"
 import {Menu} from "../Pages/Menu"
 
-
-
-
-
 export function AdminRoutes(){
     return(
         <Routes>
@@ -18,9 +14,6 @@ export function AdminRoutes(){
             <Route path="/newdish" element ={<NewDish/>} />
             <Route path="/editdish/:id" element ={<EditDish/>} />
             <Route path="/menu" element={<Menu/>} />
-            
-            
-
         </Routes>
     )
 }

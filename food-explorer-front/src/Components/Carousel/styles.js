@@ -6,14 +6,12 @@ export const Container = styled.div`
   max-width: 100%;
   margin-top: 3rem;
 
-  
-
-  @media (max-width: 1049px) {
+  @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
     margin-left: 1.5rem;
-
-    
   }
-`
+
+`;
+
 
 export const Content = styled.div`
   position: relative;
@@ -33,7 +31,8 @@ export const Content = styled.div`
   > div {
     scroll-snap-align: center;
   }
-`
+`;
+
 export const ControlLeft = styled.div`
   position: absolute;
   left: 0;
@@ -46,9 +45,8 @@ export const ControlLeft = styled.div`
   @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
     display: none;
   }
-
   
-`
+`;
 
 export const ControlRight = styled.div`
   position: absolute;
@@ -64,7 +62,7 @@ export const ControlRight = styled.div`
   }
 
   
-`
+`;
 
 export const GradientLeft = styled.div`
   position: absolute;
@@ -80,7 +78,8 @@ export const GradientLeft = styled.div`
   }
 
   
-`
+`;
+
 export const GradientRight = styled.div`
   position: absolute;
   top: 0;
@@ -96,4 +95,4 @@ export const GradientRight = styled.div`
   }
 
   
-`
+`;
