@@ -3,7 +3,7 @@ import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
 
 export const Container = styled.div`
 
-    @media (min-width:${DEVICE_BREAKPOINTS.XS}){
+    @media (min-width:${DEVICE_BREAKPOINTS.XS}) {
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
 
@@ -11,11 +11,11 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
 
-        margin: 100px auto;
+        margin: 10rem auto;
 
         h1{
             display: none;
-        }        
+        }
 
         .logo{
             width: 100%;
@@ -25,7 +25,7 @@ export const Container = styled.div`
             flex-direction:row;
             gap: 1rem;
             align-items: center;
-
+        
             p{
                 font-family: Roboto;
                 font-size: 3.7rem;
@@ -36,10 +36,10 @@ export const Container = styled.div`
         }
 
         .block{
-            width: 100%
+            width: 100%;
 
             background-color:${({theme})=>theme.COLORS.DARK_700};
-            border-radius: 16px;
+            border-radius: 1.6rem;
             padding: 3rem;
             max-width: 47.6rem;
 
@@ -57,12 +57,11 @@ export const Container = styled.div`
             a{
                 font-size: 1.4rem;
                 font-weight:500;
-            }  
+            }   
         }
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.S}){
-        
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
 
@@ -70,15 +69,15 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
 
-        margin: 100px auto;
+        margin: 10rem auto;
 
         h1{
             display: none;
-        }
+        }  
 
         .logo{
-            width: 100%;
-
+            width: 100%;            
+            
             display: flex;
             flex-direction:row;
             justify-content: center;
@@ -90,6 +89,7 @@ export const Container = styled.div`
                 font-size: 3.7rem;
                 font-weight: 700;
                 flex-wrap: nowrap;
+        
             }
         }
 
@@ -115,45 +115,44 @@ export const Container = styled.div`
             a{
                 font-size: 1.4rem;
                 font-weight:500;
-            }  
+            }
         }
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.SM}){
         background-color:${({theme})=>theme.COLORS.DARK_400};
-        width: 100%;        
-
+        width: 100%;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        margin: 100px auto;
-
+        margin: 10rem auto;
+        
         h1{
             display: none;
         }
 
         .logo{
             width: 100%;
-
+            
             display: flex;
             flex-direction:row;
             justify-content: center;
             gap: 1rem;
             align-items: center;
-
+        
             p{
                 font-family: Roboto;
                 font-size: 3.7rem;
                 font-weight: 700;
-                flex-wrap: nowrap;
-        
+                flex-wrap: nowrap;        
             }
         }
-    
+
         .block{
             width: 100%;
-            
+
             background-color:${({theme})=>theme.COLORS.DARK_700};
             border-radius: 16px;
             padding: 6rem 5rem;
@@ -173,38 +172,38 @@ export const Container = styled.div`
             a{
                 font-size: 1.4rem;
                 font-weight:500;
-            } 
+            }   
         }
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
-        height: 100%;
+        
 
         display: flex;
 
         flex-direction: column;
         align-items: center;
         
-        gap: 0;
         
         h1{
             display: none;
         }
+    
 
         .logo{
             display: flex;
             flex-direction:row;
             gap: 1.9rem;
-            align-items: center;
+            align-items: center;        
         }
-    
+        
         p{
             font-family: Roboto;
             font-size: 4.2rem;
-            font-weight: 700;
-        }
+            font-weight: 700;       
+        } 
 
         .block{
             flex: 1;
@@ -234,27 +233,32 @@ export const Container = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
-        height: 100%;
+        
 
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        padding:  5rem;
-                
+        
+        justify-content: space-around;
+        padding:  7.5rem;
+
+        margin: 0 0;
+        
+
         .logo{
             display: flex;
             flex-direction:row;
             gap: 1.9rem;
-            align-items: center;
-        }
+            align-items: center; 
+        }       
+        
         
         p{
             font-family: Roboto;
             font-size: 4.2rem;
-            font-weight: 700;
+            font-weight: 700;       
         }
-        
+
         .block{
             flex: 1;
             background-color:${({theme})=>theme.COLORS.DARK_700};
@@ -282,29 +286,30 @@ export const Container = styled.div`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}) {
-        background-color:${({theme})=>theme.COLORS.DARK_400}
+        background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
-        height: 100%;
+        
 
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 30rem;
-        padding: 5rem;
-
-        place-content: center;
         
+        justify-content: space-around;
+        padding:  7.5rem;
+        
+
         .logo{
             display: flex;
             flex-direction:row;
             gap: 1.9rem;
-            align-items: center;
-        }
+            align-items: center; 
+        }       
+        
         
         p{
             font-family: Roboto;
             font-size: 4.2rem;
-            font-weight: 700;
+            font-weight: 700;       
         }
 
         .block{
@@ -329,17 +334,16 @@ export const Container = styled.div`
             a{
                 font-size: 1.4rem;
                 font-weight:500;
-            }  
+            }
         }
     }
-    
 `;
- 
+
 export const Form = styled.form`
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 3.2rem;
 
         label{
             font-family: Roboto;
@@ -362,7 +366,7 @@ export const Form = styled.form`
                 font-family: 'Poppins';
                 
                 font-weight: 500;
-                font-size: 32px;
+                font-size: 3.2rem;
             }   
         }
 
@@ -380,7 +384,7 @@ export const Form = styled.form`
     @media (min-width:${DEVICE_BREAKPOINTS.S}){
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 3.2rem;
 
         label{
             font-family: Roboto;
@@ -392,7 +396,7 @@ export const Form = styled.form`
         }
 
         input{
-            width: 348px;
+            width: 34.8rem;
             
         }
         .input-wrapper{
@@ -406,7 +410,7 @@ export const Form = styled.form`
                 font-family: 'Poppins';
                 
                 font-weight: 500;
-                font-size: 32px;
+                font-size: 3.2rem;
             }   
         }
 
@@ -421,4 +425,3 @@ export const Form = styled.form`
         }
     }
 `;
-

@@ -11,7 +11,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
 
-        margin: 100px auto;
+        margin: 10rem auto;
 
         h1{
             display: none;
@@ -39,7 +39,7 @@ export const Container = styled.div`
             width: 100%;
 
             background-color:${({theme})=>theme.COLORS.DARK_700};
-            border-radius: 16px;
+            border-radius: 1.6rem;
             padding: 3rem;
             max-width: 47.6rem;
 
@@ -69,7 +69,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
 
-        margin: 100px auto;
+        margin: 10rem auto;
 
         h1{
             display: none;
@@ -127,7 +127,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
 
-        margin: 100px auto;
+        margin: 10rem auto;
         
         h1{
             display: none;
@@ -179,14 +179,13 @@ export const Container = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
-        height: 100%;
+        
 
         display: flex;
 
         flex-direction: column;
         align-items: center;
         
-        gap: 0;
         
         h1{
             display: none;
@@ -234,21 +233,25 @@ export const Container = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
-        height: 100%;
+        
 
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        padding:  5rem;
+        
+        justify-content: space-around;
+        padding:  7.5rem;
+
+        margin: 0 0;
         
 
         .logo{
             display: flex;
             flex-direction:row;
             gap: 1.9rem;
-            align-items: center;        
-        }
+            align-items: center; 
+        }       
+        
         
         p{
             font-family: Roboto;
@@ -285,28 +288,28 @@ export const Container = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.XL}) {
         background-color:${({theme})=>theme.COLORS.DARK_400};
         width: 100%;
-        height: 100%;
+        
 
         display: flex;
         flex-direction: row;
         align-items: center;
         
-        gap: 30rem;
-        padding: 5rem;
+        justify-content: space-around;
+        padding:  7.5rem;
         
-        place-content: center;
 
         .logo{
             display: flex;
             flex-direction:row;
             gap: 1.9rem;
-            align-items: center;
-        }
+            align-items: center; 
+        }       
+        
         
         p{
             font-family: Roboto;
             font-size: 4.2rem;
-            font-weight: 700;
+            font-weight: 700;       
         }
 
         .block{
@@ -340,7 +343,7 @@ export const Form = styled.form`
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 3.2rem;
 
         label{
             font-family: Roboto;
@@ -363,7 +366,7 @@ export const Form = styled.form`
                 font-family: 'Poppins';
                 
                 font-weight: 500;
-                font-size: 32px;
+                font-size: 3.2rem;
             }   
         }
 
@@ -381,7 +384,7 @@ export const Form = styled.form`
     @media (min-width:${DEVICE_BREAKPOINTS.S}){
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 3.2rem;
 
         label{
             font-family: Roboto;
@@ -393,7 +396,7 @@ export const Form = styled.form`
         }
 
         input{
-            width: 348px;
+            width: 34.8rem;
             
         }
         .input-wrapper{
@@ -407,7 +410,7 @@ export const Form = styled.form`
                 font-family: 'Poppins';
                 
                 font-weight: 500;
-                font-size: 32px;
+                font-size: 3.2rem;
             }   
         }
 

@@ -10,115 +10,99 @@ export const Container = styled.header`
 
 export const Content = styled.div`
     @media (min-width: ${DEVICE_BREAKPOINTS.XS}) {
-        width: 100%;        
+        width: 100%;       
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 32px;
-        white-space: nowrap;
-
-        padding: 24px 0 ;
+        padding: 2.4rem 0;
 
         .header , .headerAdmin{
-            padding: 50px 28px 0 ;
-        }
-        .mobile{
+            padding: 5rem 2.4rem 0 ;
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 16px;
+            gap: 1.6rem;
+        }
+
+        .mobile{
 
             button{
                 background: none;
                 border: none;
                 color: ${({theme})=> theme.COLORS.LIGHT_100};
-                font-size: 24px;
+                font-size: 2.4rem;
             }
         }
     }       
 
     @media (min-width: ${DEVICE_BREAKPOINTS.S}) {
         width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        white-space: nowrap;
-
-        padding: 24px 0 ;
+        padding: 2.4rem 0 ;
 
         .header , .headerAdmin{
-            padding: 50px 28px 0 ;
-        }
-
-        .mobile{
-
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 30px;
+            gap: 3rem;
 
+            padding: 5rem 2.8rem 0 ;
+        }
+
+        .mobile{
             button{
                 background: none;
                 border: none;
                 color: ${({theme})=> theme.COLORS.LIGHT_100};
-                font-size: 24px;
+                font-size: 2.4rem;
             }
         }
     }       
 
     @media (min-width: ${DEVICE_BREAKPOINTS.SM}) {
         width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        white-space: nowrap;
+        
 
-        padding: 24px 0 ;
+        padding: 2.4rem 0 ;
 
         .header , .headerAdmin{
-            padding: 50px 28px 0 ;
-        }
-        .mobile{
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 60px;
+            gap: 6rem;
 
+            padding: 5rem 2.8rem 0 ;
+        }
+        .mobile{
             button{
                 background: none;
                 border: none;
                 color: ${({theme})=> theme.COLORS.LIGHT_100};
-                font-size: 24px;
+                font-size: 2.4rem;
             } 
         }
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         width: 100%;  
-
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        white-space: nowrap;
-
-        padding: 24px 0 ;
+        padding: 2.4rem 0 ;
 
         .header , .headerAdmin{
-            padding: 50px 28px 0 ;
+            display: flex;
+            align-items: center;
+            gap: 21rem;
+            white-space: nowrap;
+            padding: 5rem 2.8rem 0 ;
         }
             
         .mobile{
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 200px;
+            gap: 20rem;
             
             button{
                 background: none;
                 border: none;
                 color: ${({theme})=> theme.COLORS.LIGHT_100};
-                font-size: 24px;
+                font-size: 2.4rem;
             }
         }
     }
@@ -129,15 +113,15 @@ export const Content = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 32px;
+        gap: 3.2rem;
 
-        padding: 24px 123px;
+        padding: 2.4rem 12.3rem;
 
         .header , .headerAdmin{
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 16px;
+            gap: 1.6rem;
             padding: 0 ;
         }
 
@@ -177,15 +161,15 @@ export const Search = styled.div`
         flex: 1;
         width: 100%;
         justify-content: center;
-        gap: 14px;
+        gap: 1.4rem;
     }
 `;
 
 export const RedButton = styled.div`
-    width: 226px;
+    width: 22.6rem;
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: .8rem;
     align-items: center;
     justify-content: center;
 
@@ -199,7 +183,7 @@ export const Exit = styled.div`
         text-decoration: none;
         color: ${({theme})=>theme.COLORS.LIGHT_100};
         
-        margin-top: 20px;
+        margin-top: 2rem;
     }
 
     @media (max-width:${DEVICE_BREAKPOINTS.MD}) {

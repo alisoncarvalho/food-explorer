@@ -2,25 +2,25 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
-    height: 48px;
+    height: 4.8rem;
     display: flex ;
     align-items: center;
     background-color: ${({theme})=>theme.COLORS.DARK_900};
     color: ${({theme})=>theme.COLORS.LIGHT_500};
-    border-radius: 5px;
-    padding: 14px 12px;
+    border-radius: .5rem;
+    padding: 1.4rem 1.2rem;
 
     >input{
         width:100%;
         background-color: transparent;
-        padding: 14px 14px;
+        padding: 1.4rem 1.4rem;
         color:${({theme})=>theme.COLORS.LIGHT_500};
-        height: 48px;
+        height: 4.8rem;
         
         border: none;
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
-        font-size: 16px;   
+        font-size: 1.6rem;   
     }
     
     input:focus {

@@ -21,7 +21,7 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         margin: auto;
-        padding: 0  24px 0 24px;
+        padding: 0  2.4rem 0 2.4rem;
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
@@ -29,21 +29,21 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         margin: auto;
-        padding: 0  123px 0 123px;
+        padding: 0  12.3rem 0 12.3rem;
     }
 `;
 
 export const Main = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
         width: 100%;
-        margin-top: 62px;
+        margin-top: 6.2rem;
 
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 2.4rem;
 
         .category{        
-            height:344px;
+            height:34.4rem;
         
             display: flex;
             flex-direction: column;
@@ -52,8 +52,8 @@ export const Main = styled.div`
             h2{
                 font-family: 'Poppins';
                 font-weight: 500;
-                font-size: 18px;
-                margin-bottom: 24px;
+                font-size: 1.8rem;
+                margin-bottom: 2.4rem;
                 align-self: start;
             }
 
@@ -71,7 +71,7 @@ export const Main = styled.div`
             align-items: center;
 
             >svg{
-                font-size: 80px;
+                font-size: 8rem;
             }
             }
         }
@@ -79,7 +79,7 @@ export const Main = styled.div`
         .cards{
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 1.6rem;
             overflow-x: auto;
             z-index: 0;
         }
@@ -95,10 +95,10 @@ export const Main = styled.div`
 
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 2.4rem;
 
         .category{
-            height:344px;
+            height:34.4rem;
         
             display: flex;
             flex-direction: column;
@@ -107,8 +107,8 @@ export const Main = styled.div`
             h2{
                 font-family: 'Poppins';
                 font-weight: 500;
-                font-size: 18px;
-                margin-bottom: 24px;
+                font-size: 1.8rem;
+                margin-bottom: 2.4rem;
                 align-self: start;
             }
 
@@ -120,7 +120,7 @@ export const Main = styled.div`
         .cards{
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 1.6rem;
             overflow-x: auto;
             z-index: 0;
 
@@ -134,7 +134,7 @@ export const Main = styled.div`
                 align-items: center;
 
                 >svg{
-                    font-size: 80px;
+                    font-size: 8rem;
                 }
             }   
         }
@@ -149,10 +149,10 @@ export const Main = styled.div`
 
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 2.4rem;
 
         .category{            
-            height:344px;
+            height:34.4rem;
 
             display: flex;
             flex-direction: column;
@@ -161,8 +161,8 @@ export const Main = styled.div`
             h2{
                 font-family: 'Poppins';
                 font-weight: 500;
-                font-size: 18px;
-                margin-bottom: 24px;
+                font-size: 1.8rem;
+                margin-bottom: 2.4rem;
                 align-self: start;
             }
 
@@ -176,7 +176,7 @@ export const Main = styled.div`
                 align-items: center;
 
                 >svg{
-                    font-size: 80px;
+                    font-size: 8rem;
                 }
             }
 
@@ -188,7 +188,7 @@ export const Main = styled.div`
         .cards{
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 1.6rem;
             overflow-x: auto;
             z-index: 0;
 
@@ -202,7 +202,7 @@ export const Main = styled.div`
                 align-items: center;
 
                 >svg{
-                    font-size: 80px;
+                    font-size: 8.0rem;
                 }
             }
         }
@@ -217,11 +217,11 @@ export const Main = styled.div`
         width: 100%;
 
         .category{            
-            min-height: 500px;
+            min-height: 50rem;
             
             display: flex;
             flex-direction: column;
-            margin-bottom:47px;
+            margin-bottom:4.7rem;
             
             h4{
                 position: absolute;
@@ -233,35 +233,35 @@ export const Main = styled.div`
                 align-items: center;
 
                 >svg{
-                    font-size: 80px;
+                    font-size: 8rem;
                 }
             }
 
             .text{
-                padding: 0 24px;
+                padding: 0 2.4rem;
                 font-family: 'Poppins';
                 font-weight: 500;
-                font-size: 18px;
-                margin-bottom: 24px;
+                font-size: 1.8rem;
+                margin-bottom: 2.4rem;
                 align-self: start;
             }
 
             .sides{
-                width: 1122px;
+                width: 112.2rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
 
-                padding: 0 30px;
+                padding: 0 3rem;
                 position: absolute;
-                top: 250px;
+                top: 25rem;
                 z-index: 1;
 
                 button{
                     background:none;
                     border: none;
                     color: ${({theme})=> theme.COLORS.LIGHT_100};
-                    font-size: 40px;
+                    font-size: 4rem;
                             
                 }
             }
@@ -271,31 +271,29 @@ export const Main = styled.div`
 
         .cards{
             z-index: 0;
-            min-height: 463px;
-            padding: 0 24px;
-            max-width: 1122px;
+            min-height: 46.3rem;
+            padding: 0 2.4rem;
+            max-width: 112.2rem;
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 1.6rem;
             overflow-x: auto;
         }
 
         .cards::-webkit-scrollbar {
             display: none; 
         }
-
-
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}) {
         width: 100%;
 
         .category{
-            min-height: 500px;
+            min-height: 50rem;
             position: relative;
             display: flex;
             flex-direction: column;
-            padding-bottom:47px;
+            padding-bottom:4.7rem;
 
             h4{
                 position: absolute;
@@ -307,35 +305,35 @@ export const Main = styled.div`
                 align-items: center;
 
                 >svg{
-                    font-size: 80px;
+                    font-size: 8rem;
                 }
             }
 
             .text{
-                padding: 0 24px;
+                padding: 0 2.4rem;
                 font-family: 'Poppins';
                 font-weight: 500;
-                font-size: 18px;
-                margin-bottom: 24px;
+                font-size: 1.8rem;
+                margin-bottom: 2.4rem;
                 align-self: start;
             }
 
             .sides{
-                width: 1122px;
+                width: 112.2rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
 
-                padding: 0 30px;
+                padding: 0 3rem;
                 position: absolute;
-                top: 250px;
+                top: 25rem;
                 z-index: 1;
 
                 button{
                     background:none;
                     border: none;
                     color: ${({theme})=> theme.COLORS.LIGHT_100};
-                    font-size: 40px;
+                    font-size: 4rem;
                             
                 }
             }
@@ -343,12 +341,12 @@ export const Main = styled.div`
 
         .cards{
             z-index: 0;
-            min-height: 463px;
-            padding: 0 24px;
-            max-width: 1122px;
+            min-height: 46.3rem;
+            padding: 0 2.4rem;
+            max-width: 112.2rem;
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 1.6rem;
             overflow-x: auto;
         }
 
@@ -363,7 +361,7 @@ export const Main = styled.div`
 export const Banner = styled.div`
 
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
-        margin-top: 25px;
+        margin-top: 2.5rem;
 
         img{
             display: none;
@@ -379,30 +377,30 @@ export const Banner = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.SM}){
         img{
             display: block;
-            width: 191px;            
-            height: 149px;
-            margin-top: 15px;
-            margin-left: -20px;
+            width: 19.1rem;            
+            height: 14.9rem;
+            margin-top: 1.5rem;
+            margin-left: -2rem;
         }
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
         img{
             display: block;
-            width: 250px;            
-            height: 195px;
-            margin-top: 15px;
-            margin-left: -20px;            
+            width: 25rem;            
+            height: 19.5rem;
+            margin-top: 1.5rem;
+            margin-left: -2rem;            
         }
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
         margin-left: 0;
         img{
-            width: 480px;
-            height: 340px;
-            margin-left: -45px;
-            margin-top: 20px;
+            width: 48rem;
+            height: 34rem;
+            margin-left: -4.5rem;
+            margin-top: 2rem;
         }
     }   
         
@@ -412,10 +410,10 @@ export const Banner = styled.div`
         z-index: 0;
 
         img{
-            width: 632px;
-            height: 406px;
+            width: 63.2rem;
+            height: 40.6rem;
 
-            margin-left: -55px;        
+            margin-left: -5.5rem;        
         }
     }
 `;
@@ -426,11 +424,11 @@ export const Slogan = styled.div`
 
         .text{
             position: absolute;
-            top: 25px;
-            left: 36px;
+            top: 2.5rem;
+            left: 3.6rem;
 
-            width: 215px;
-            height: 60px;
+            width: 21.5rem;
+            height: 6rem;
 
             display: flex;
             flex-direction: column;
@@ -439,12 +437,12 @@ export const Slogan = styled.div`
 
             h1{
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 1.8rem;
             }
             
             p{
                 font-weight: 400;
-                font-size: 12px;
+                font-size: 1.2rem;
             }
         }
     }
@@ -454,11 +452,11 @@ export const Slogan = styled.div`
 
         .text{
             position: absolute;
-            top: 25px;
-            left: 65px;
+            top: 2.5rem;
+            left: 6.5rem;
 
-            width: 215px;
-            height: 60px;
+            width: 21.5rem;
+            height: 6rem;
 
             display: flex;
             flex-direction: column;
@@ -467,12 +465,12 @@ export const Slogan = styled.div`
 
             h1{
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 1.8rem;
             }
             
             p{
                 font-weight: 400;
-                font-size: 12px;
+                font-size: 1.2rem;
             }
         }
     }
@@ -482,11 +480,11 @@ export const Slogan = styled.div`
 
         .text{
             position: absolute;
-            top: -90px;
-            left: 180px;
+            top: -9rem;
+            left: 18rem;
 
-            width: 200px;
-            height: 60px;
+            width: 20rem;
+            height: 6rem;
 
             display: flex;
             flex-direction: column;
@@ -496,12 +494,12 @@ export const Slogan = styled.div`
 
             h1{
                 font-weight: 600;
-                font-size: 17px;
+                font-size: 1.7rem;
             }
             
             p{
                 font-weight: 400;
-                font-size: 11px;
+                font-size: 1.1rem;
             }
         }
     }
@@ -511,10 +509,10 @@ export const Slogan = styled.div`
 
         .text{
             position: absolute;
-            top: -170px;
-            left: 550px;
+            top: -17rem;
+            left: 55rem;
 
-            width: 421px ;
+            width: 42.1rem ;
             
             font-family: 'Poppins' , sans-serif;
 
@@ -523,12 +521,12 @@ export const Slogan = styled.div`
 
             h1{
             font-weight: 600;
-            font-size: 38px;
+            font-size: 3.8rem;
             }
 
             p{
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 1.4rem;
             }
         }
     }
@@ -538,10 +536,10 @@ export const Slogan = styled.div`
 
         .text{
             position: absolute;
-            top: -200px;
-            left: 680px;
+            top: -20rem;
+            left: 68rem;
 
-            width: 421px ;
+            width: 42.1rem ;
 
             font-family: 'Poppins' , sans-serif;
 
@@ -550,12 +548,12 @@ export const Slogan = styled.div`
 
             h1{
             font-weight: 600;
-            font-size: 38px;
+            font-size: 3.8rem;
             
             }
             p{
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 1.4rem;
             }
         }
     }
@@ -564,51 +562,51 @@ export const Slogan = styled.div`
 export const Background = styled.div`
 
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
-        width: 272px;
-        height: 120px;
+        width: 27.2rem;
+        height: 12rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
         border-radius: 3px;
     } 
 
     @media (min-width:${DEVICE_BREAKPOINTS.S}){
-        width: 327px;
-        height: 120px;
+        width: 32.7rem;
+        height: 12rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
         border-radius: 3px;
     } 
 
     @media (min-width:${DEVICE_BREAKPOINTS.SM}){
-        width: 377px;
-        height: 120px;
+        width: 37.7rem;
+        height: 12rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
         border-radius: 3px;
             
         position: absolute;
-        top: 203px;
+        top: 20.3rem;
         z-index: -1;
     } 
     
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
-        width: 1100px;
-        height: 260px;
+        width: 110rem;
+        height: 26rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
         border-radius: 3px;
         position: absolute;
 
-        top: 221px;
+        top: 22.1rem;
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}){
-        width: 1200px;
-        height: 323px;
+        width: 120rem;
+        height: 32.3rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);        
         border-radius: 3px;
         position: absolute;
 
-        top: 224px;
+        top: 22.4rem;
 
         z-index: -1;
     } 

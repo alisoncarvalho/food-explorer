@@ -9,8 +9,8 @@ export const Container = styled.div`
     color: ${({theme , $isnew})=> $isnew ? theme.COLORS.LIGHT_500 : theme.COLORS.LIGHT_100 };
     border: ${({ theme , $isnew}) => $isnew ? `2px dashed ${theme.COLORS.LIGHT_600}` : "none"};
     
-    padding-right: 16px;
-    border-radius:10px;
+    padding-right: 1.6rem;
+    border-radius:1rem;
 
     >button{
         border:none;
@@ -26,14 +26,14 @@ export const Container = styled.div`
     }
     
     >input{
-        height:32px; 
+        height:3.2rem; 
         
         width: ${($isnew) => $isnew && '100px'};
         background: none;
         border: none;
         outline: none;
 
-        padding: 10px 16px;
+        padding: 1rem 1.6rem;
 
         color:${({theme})=> theme.COLORS.LIGHT_100 };
         background: transparent;

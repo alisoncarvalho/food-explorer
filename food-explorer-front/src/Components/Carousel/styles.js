@@ -36,7 +36,7 @@ export const Content = styled.div`
 export const ControlLeft = styled.div`
   position: absolute;
   left: 0;
-  top: 15.5rem;
+  top: 20rem;
   z-index: 1;
   width: 2.5rem;
   height: 2.5rem;
@@ -51,7 +51,7 @@ export const ControlLeft = styled.div`
 export const ControlRight = styled.div`
   position: absolute;
   right: 0;
-  top: 15.5rem;
+  top: 20rem;
   z-index: 1;
   width: 2.5rem;
   height: 2.5rem;

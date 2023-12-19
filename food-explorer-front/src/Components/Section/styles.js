@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    margin: 28px 0;
+    margin: 2.8rem 0;
 
     >label{
         
         color: ${({theme}) => theme.COLORS.LIGHT_100};
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 400;
     }
 
     main{
         width: 100%;
         height: fit-content;
-        border-radius: 5px;
+        border-radius: .5rem;
         background-color: ${({theme})=>theme.COLORS.DARK_900};
         
-        padding:  8px  8px 8px;
+        padding:  .8rem  .8rem .8rem;
     }
 `;
 

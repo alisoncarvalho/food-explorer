@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 100%;
     
-    padding: 33px 28px;
+    padding: 3.3rem 2.8rem;
     display: flex;
     flex-direction: column;
 `;
@@ -20,22 +20,22 @@ export const Main = styled.div`
     
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 3.6rem;
 
     a{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 2.4rem;
         text-decoration: none;
         color: ${({theme})=>theme.COLORS.LIGHT_300};
     }
 
     #line{
-        height: 1px;
+        height: .1rem;
         width: 100%;
         background-color:${({theme})=>theme.COLORS.DARK_900};
-        margin-top: 10px;
-        margin-bottom: 5px;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
     }
 `;

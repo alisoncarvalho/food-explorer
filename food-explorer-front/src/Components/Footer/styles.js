@@ -14,7 +14,7 @@ export const Content = styled.div`
         flex-direction: column;
         align-items: center;
         
-        padding: 24px 0  ;
+        padding: 2.4rem 0  ;
 
         .logo{
             display: none;
@@ -28,7 +28,7 @@ export const Content = styled.div`
         flex-direction: column;
         align-items: center;
         
-        padding: 24px 0  ;
+        padding: 2.4rem 0  ;
 
         .logo{
             display: none;
@@ -43,7 +43,7 @@ export const Content = styled.div`
         
         align-items: center;
         justify-content: space-between;
-        padding: 24px;
+        padding: 2.4rem;
 
         width: 100%;
         margin: auto;
@@ -52,25 +52,25 @@ export const Content = styled.div`
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 8px;
+            gap: .8rem;
             white-space: nowrap;
 
             color:${({theme})=>theme.COLORS.LIGHT_700};
             
             svg{
                 color: ${({theme})=>theme.COLORS.LIGHT_700};
-                width: 17px;
+                width: 1.7rem;
             }
 
             h1{
                 font-family: 'Roboto';
                 
                 font-weight: 700;
-                font-size: 15px;
+                font-size: 1.5rem;
             }
         }
         p{
-            font-size: 15px;
+            font-size: 1.5rem;
         }
     }
 
@@ -82,12 +82,12 @@ export const Content = styled.div`
         
         margin: auto;
 
-        padding: 24px 123px;
+        padding: 2.4px 12.3rem;
 
         .logo{
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 1rem;
             white-space: nowrap;
 
             color:${({theme})=>theme.COLORS.LIGHT_700};
@@ -100,7 +100,7 @@ export const Content = styled.div`
                 font-family: 'Roboto';
                 
                 font-weight: 700;
-                font-size: 24px;
+                font-size: 2.4rem;
             }
         }
     }
@@ -113,12 +113,12 @@ export const Content = styled.div`
 
         margin: auto;
         
-        padding: 24px 123px;
+        padding: 2.4rem 12.3rem;
 
         .logo{
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 1.0rem;
             white-space: nowrap;
 
             color:${({theme})=>theme.COLORS.LIGHT_700};
@@ -131,7 +131,7 @@ export const Content = styled.div`
                 font-family: 'Roboto';
                 
                 font-weight: 700;
-                font-size: 24px;
+                font-size: 2.4rem;
             }
         }
     }

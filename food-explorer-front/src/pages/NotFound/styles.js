@@ -11,6 +11,6 @@ export const Container = styled.div`
   
   > a {
     color: ${({ theme }) => theme.COLORS.BRAND_500};
-    margin-top: 24px;
+    margin-top: 2.4rem;
   }
 `;

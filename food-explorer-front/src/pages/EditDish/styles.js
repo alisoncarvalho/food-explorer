@@ -10,8 +10,6 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     width: 100%;
-    max-width: 1368px;
-    
     margin: auto;
 `;
 
@@ -21,7 +19,7 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         
-        padding: 10px 32px 53px;
+        padding: 1rem 3.2rem 5.3rem ;
 
         h1{
             display: flex;
@@ -32,20 +30,20 @@ export const Form = styled.form`
         a{
             display: flex;
             align-items: center;
-            font-size: 16px;
+            font-size: 1.6rem;
 
             font-weight: 400;
             color: ${({theme})=>theme.COLORS.LIGHT_300};
-            margin-bottom: 24px;
+            margin-bottom: 2.4rem;
 
             >svg{
-                width: 17px;
+                width: 1.7rem;
             }
         }
 
         label{
-            margin-top: 24px;
-            margin-bottom: 16px;
+            margin-top: 2.4rem;
+            margin-bottom: 1.6rem;
 
             display: flex;
         }
@@ -62,23 +60,23 @@ export const Form = styled.form`
             span{
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 align-items: center;
                 position: absolute;
-                top: 12px;
-                left: 14px;
+                top: 1.2rem;
+                left: 1.4rem;
             }
 
             .changeImage{
                 width: 100%;
-                height: 48px;
-                border-radius: 5px;
+                height: 4.8rem;
+                border-radius: .5rem;
                 background-color: ${({theme})=> theme.COLORS.DARK_800};
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 position: relative;
-                margin-top: 16px;
+                margin-top: 1.6rem;
             }
             
             #image-file{
@@ -92,17 +90,17 @@ export const Form = styled.form`
             -moz-appearance: none;
             appearance: none;
             width: 100%;
-            height: 48px;
-            border-radius:5px;
+            height: 4.8rem;
+            border-radius: .5rem;
             border: none;
             background-color: ${({theme})=>theme.COLORS.DARK_900};
             color: ${({theme})=>theme.COLORS.LIGHT_500};
-            padding: 13px 14px ;
+            padding: 1.3rem 1.4rem ;
 
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1.6rem;
 
             &:focus {
                 box-shadow: 0 0 0 0;
@@ -113,18 +111,18 @@ export const Form = styled.form`
         .tagsBox{
             width: 100%;        
             border: none;
-            border-radius: 5px;
-            height: 48px;
+            border-radius: .5rem;
+            height: 4.8rem;
 
             background-color:${({theme})=>theme.COLORS.DARK_900} ;
-            padding: 6px 8px ;
+            padding: .6rem .8rem ;
 
             .tags{
                 width: 100%;
 
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
             }
 
             button{
@@ -175,7 +173,7 @@ export const Form = styled.form`
 
         .buttons{            
             display: flex;
-            gap: 12px;
+            gap: 1.2rem;
 
             .button1 {           
                 button{
@@ -196,7 +194,7 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         
-        padding: 10px 32px 53px;    
+        padding: 1.0rem 3.2rem 5.3rem;    
 
         h1{
             display: flex;
@@ -208,19 +206,19 @@ export const Form = styled.form`
             display: flex;
             align-items: center;
 
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
             color: ${({theme})=>theme.COLORS.LIGHT_300};
-            margin-bottom: 24px;
+            margin-bottom: 2.4rem;
 
             >svg{
-                width: 17px;
+                width: 1.7rem;
             }
         }
 
         label{
-            margin-top: 24px;
-            margin-bottom: 16px;
+            margin-top: 2.4rem;
+            margin-bottom: 1.6rem;
 
             display: flex;
         }
@@ -237,23 +235,23 @@ export const Form = styled.form`
             span{
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 align-items: center;
                 position: absolute;
-                top: 12px;
-                left: 14px;
+                top: 1.2rem;
+                left: 1.4rem;
             }
 
             .changeImage{
                 width: 100%;
-                height: 48px;
-                border-radius: 5px;
+                height: 4.8rem;
+                border-radius: .5rem;
                 background-color: ${({theme})=> theme.COLORS.DARK_800};
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 position: relative;
-                margin-top: 16px;
+                margin-top: 1.6rem;
             }
             
             #image-file{
@@ -267,17 +265,17 @@ export const Form = styled.form`
             -moz-appearance: none;
             appearance: none;
             width: 100%;
-            height: 48px;
-            border-radius:5px;
+            height: 4.8rem;
+            border-radius:.5rem;
             border: none;
             background-color: ${({theme})=>theme.COLORS.DARK_900};
             color: ${({theme})=>theme.COLORS.LIGHT_500};
-            padding: 13px 14px ;
+            padding: 1.3rem 1.4rem ;
 
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1.6rem;
 
             &:focus {
                 box-shadow: 0 0 0 0;
@@ -288,18 +286,18 @@ export const Form = styled.form`
         .tagsBox{
             width: 100%;        
             border: none;
-            border-radius: 5px;
-            height: 48px;
+            border-radius: .5rem;
+            height: 4.8rem;
 
             background-color:${({theme})=>theme.COLORS.DARK_900} ;
-            padding: 6px 8px ;
+            padding: .6rem .8rem ;
 
             .tags{
                 width: 100%;
 
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
             }
 
             button{
@@ -310,7 +308,7 @@ export const Form = styled.form`
 
         button{
             background-color: ${({theme})=>theme.COLORS.TOMATO_400};
-            margin-top: 24px;
+            margin-top: 2.4rem;
         }
             
         .firstline{
@@ -349,7 +347,7 @@ export const Form = styled.form`
         .buttons{
             display: flex;
 
-            gap: 50px;
+            gap: 5.0rem;
 
             .button1 {            
                 button{
@@ -371,20 +369,20 @@ export const Form = styled.form`
         .buttons{
             display: flex;
             flex-direction: row;
-            gap: 32px;
-            padding: 24px 0;
+            gap: 3.2rem;
+            padding: 2.4rem 0;
         }
 
         .button1 {
             button{
-                width: 160px;
+                width: 16rem;
                 background-color: ${({theme})=>theme.COLORS.DARK_800};
             }
         }
 
         .button2 {
             button{
-                width: 172px;
+                width: 17.2rem;
                 background-color: ${({theme})=>theme.COLORS.TOMATO_400};
             }
         }
@@ -398,7 +396,7 @@ export const Form = styled.form`
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
         display: flex;
         flex-direction: column;
-        padding: 24px 123px;
+        padding: 2.4rem 12.3rem;
 
         h1{
             display: flex;
@@ -409,16 +407,16 @@ export const Form = styled.form`
         a{
             display: flex;
             align-items: center;
-            font-size: 24px;
+            font-size: 2.4rem;
 
             font-weight: 700;
             color: ${({theme})=>theme.COLORS.LIGHT_300};
-            margin-bottom: 24px;
+            margin-bottom: 2.4rem;
         }
 
         label{
-            margin-top: 24px;
-            margin-bottom: 16px;
+            margin-top: 2.4rem;
+            margin-bottom: 1.6rem;
 
             display: flex;
         }
@@ -436,23 +434,23 @@ export const Form = styled.form`
             span{
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 align-items: center;
                 position: absolute;
-                top: 12px;
-                left: 14px;
+                top: 1.2rem;
+                left: 1.4rem;
             }
 
             .changeImage{
                 width: 100%;
-                height: 48px;
-                border-radius: 5px;
+                height: 4.8rem;
+                border-radius: .5rem;
                 background-color: ${({theme})=> theme.COLORS.DARK_800};
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 position: relative;
-                margin-top: 16px;
+                margin-top: 1.6rem;
             }
             
             #image-file{
@@ -466,17 +464,17 @@ export const Form = styled.form`
             -moz-appearance: none;
             appearance: none;
             width: 100%;
-            height: 48px;
-            border-radius:5px;
+            height: 4.8rem;
+            border-radius:.5rem;
             border: none;
             background-color: ${({theme})=>theme.COLORS.DARK_900};
             color: ${({theme})=>theme.COLORS.LIGHT_500};
-            padding: 13px 14px ;
+            padding: 1.3rem 1.4rem ;
 
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1.6rem;
 
             &:focus {
                 box-shadow: 0 0 0 0;
@@ -487,18 +485,18 @@ export const Form = styled.form`
         .tagsBox{
             width: 100%;        
             border: none;
-            border-radius: 5px;
-            height: 48px;
+            border-radius: .5rem;
+            height: 4.8rem;
 
             background-color:${({theme})=>theme.COLORS.DARK_900} ;
-            padding: 6px 8px ;
+            padding: .6rem .8rem ;
 
             .tags{
                 width: 100%;
 
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
             }
 
             button{
@@ -509,13 +507,13 @@ export const Form = styled.form`
 
         button{
             background-color: ${({theme})=>theme.COLORS.TOMATO_400};
-            margin-top: 24px;
+            margin-top: 2.4rem;
         }
         
         .firstline{
             display: flex;
             flex-direction:row;
-            gap: 32px;
+            gap: 3.2rem;
 
             .labelImage{
                 width: 60%;
@@ -532,11 +530,11 @@ export const Form = styled.form`
             width: 100%;
             display: flex;
             flex-direction: row;
-            gap: 32px;
+            gap: 3.2rem;
 
             .tagsBox{
                 width: 100%;
-                min-width: 600px;
+                min-width: 60rem;
             }
             .price{
                 width: 100%;
@@ -544,27 +542,27 @@ export const Form = styled.form`
         }
         
         .button{
-            width: 172px;
+            width: 17.2rem;
             align-self: end;
         }
 
         .buttons{
             display: flex;
             flex-direction: row;
-            gap: 32px;
-            padding: 24px 0;
+            gap: 3.2rem;
+            padding: 2.4rem 0;
         }
 
         .button1 {
             button{
-                width: 160px;
+                width: 16rem;
                 background-color: ${({theme})=>theme.COLORS.DARK_800};
             }
         }
 
         .button2 {
             button{
-                width: 172px;
+                width: 17.2rem;
                 background-color: ${({theme})=>theme.COLORS.TOMATO_400};
             }
         }
@@ -577,7 +575,7 @@ export const Form = styled.form`
     @media (min-width:${DEVICE_BREAKPOINTS.XL}){
         display: flex;
         flex-direction: column;
-        padding: 24px 123px;
+        padding: 2.4rem 12.3rem;
 
         h1{
             display: flex;
@@ -589,15 +587,15 @@ export const Form = styled.form`
             display: flex;
             align-items: center;
 
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: 700;
             color: ${({theme})=>theme.COLORS.LIGHT_300};
-            margin-bottom: 24px;
+            margin-bottom: 2.4rem;
         }
 
         label{
-            margin-top: 24px;
-            margin-bottom: 16px;
+            margin-top: 2.4rem;
+            margin-bottom: 1.6rem;
 
             display: flex;
         }
@@ -614,23 +612,23 @@ export const Form = styled.form`
             span{
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 align-items: center;
                 position: absolute;
-                top: 12px;
-                left: 14px;
+                top: 1.2rem;
+                left: 1.4rem;
             }
 
             .changeImage{
                 width: 100%;
-                height: 48px;
-                border-radius: 5px;
+                height: 4.8rem;
+                border-radius: .5rem;
                 background-color: ${({theme})=> theme.COLORS.DARK_800};
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
                 position: relative;
-                margin-top: 16px;
+                margin-top: 1.6rem;
             }
             
             #image-file{
@@ -643,17 +641,17 @@ export const Form = styled.form`
             -moz-appearance: none;
             appearance: none;
             width: 100%;
-            height: 48px;
-            border-radius:5px;
+            height: 4.8rem;
+            border-radius:.5rem;
             border: none;
             background-color: ${({theme})=>theme.COLORS.DARK_900};
             color: ${({theme})=>theme.COLORS.LIGHT_500};
-            padding: 13px 14px ;
+            padding: 1.3rem 1.4rem ;
 
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1.6rem;
 
             &:focus {
                 box-shadow: 0 0 0 0;
@@ -664,18 +662,18 @@ export const Form = styled.form`
         .tagsBox{
             width: 100%;        
             border: none;
-            border-radius: 5px;
-            height: 48px;
+            border-radius: .5rem;
+            height: 4.8rem;
 
             background-color:${({theme})=>theme.COLORS.DARK_900} ;
-            padding: 6px 8px ;
+            padding: .6rem .8rem ;
 
             .tags{
                 width: 100%;
 
                 display: flex;
                 flex-direction: row;
-                gap: 8px;
+                gap: .8rem;
             }
 
             button{
@@ -686,13 +684,13 @@ export const Form = styled.form`
 
         button{
             background-color: ${({theme})=>theme.COLORS.TOMATO_400};
-            margin-top: 24px;
+            margin-top: 2.4rem;
         }
         
         .firstline{
             display: flex;
             flex-direction:row;
-            gap: 32px;
+            gap: 3.2rem;
 
             .labelImage{
                 width: 60%;
@@ -709,10 +707,10 @@ export const Form = styled.form`
             width: 100%;
             display: flex;
             flex-direction: row;
-            gap: 32px;
+            gap: 3.2rem;
 
             .tagsBox{
-                width: 837px;
+                width: 83.7rem;
             }
             .price{
                 width: 100%;
@@ -720,7 +718,7 @@ export const Form = styled.form`
         }
         
         .button{
-            width: 172px;
+            width: 17.2rem;
             align-self: end;
         }
     }
