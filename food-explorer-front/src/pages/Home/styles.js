@@ -24,7 +24,7 @@ export const Content = styled.div`
         padding: 0  2.4rem 0 2.4rem;
     }
 
-    @media (min-width:${DEVICE_BREAKPOINTS.LG}) {
+    @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -359,6 +359,7 @@ export const Main = styled.div`
 `;
 
 export const Banner = styled.div`
+    
 
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
         margin-top: 2.5rem;
@@ -375,6 +376,7 @@ export const Banner = styled.div`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.SM}){
+        position: relative;
         img{
             display: block;
             width: 19.1rem;            
@@ -385,6 +387,7 @@ export const Banner = styled.div`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.MD}) {
+        
         img{
             display: block;
             width: 25rem;            
@@ -397,10 +400,10 @@ export const Banner = styled.div`
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
         margin-left: 0;
         img{
-            width: 48rem;
-            height: 34rem;
+            width: 43rem;
+            height: 30rem;
             margin-left: -4.5rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
     }   
         
@@ -419,13 +422,14 @@ export const Banner = styled.div`
 `;
 
 export const Slogan = styled.div`
-    @media (min-width:${DEVICE_BREAKPOINTS.XS}){
-        position: relative;
+    position: relative;
 
+    @media (min-width:${DEVICE_BREAKPOINTS.XS}){
+        
         .text{
             position: absolute;
             top: 2.5rem;
-            left: 3.6rem;
+            left: 15%;
 
             width: 21.5rem;
             height: 6rem;
@@ -448,12 +452,11 @@ export const Slogan = styled.div`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.S}){
-        position: relative;
 
         .text{
             position: absolute;
             top: 2.5rem;
-            left: 6.5rem;
+            left: 20%;
 
             width: 21.5rem;
             height: 6rem;
@@ -476,12 +479,12 @@ export const Slogan = styled.div`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.SM}){
-        position: relative;
-
+        
         .text{
             position: absolute;
             top: -9rem;
-            left: 18rem;
+            left: auto;
+            right: 1.5rem ;
 
             width: 20rem;
             height: 6rem;
@@ -505,14 +508,14 @@ export const Slogan = styled.div`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){    
-        position: relative;
-
+       
         .text{
             position: absolute;
-            top: -17rem;
-            left: 55rem;
+            top: -15rem;
+            left: auto;
+            right: 2rem ;
 
-            width: 42.1rem ;
+            width: 40rem ;
             
             font-family: 'Poppins' , sans-serif;
 
@@ -521,23 +524,22 @@ export const Slogan = styled.div`
 
             h1{
             font-weight: 600;
-            font-size: 3.8rem;
+            font-size: 3.2rem;
             }
 
             p{
                 font-weight: 400;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}){
-        position: relative;
-
+       
         .text{
             position: absolute;
             top: -20rem;
-            left: 68rem;
+            right: 12rem;
 
             width: 42.1rem ;
 
@@ -560,9 +562,10 @@ export const Slogan = styled.div`
 `;
 
 export const Background = styled.div`
+    width: 100%;
 
     @media (min-width:${DEVICE_BREAKPOINTS.XS}){
-        width: 27.2rem;
+        
         height: 12rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
@@ -570,7 +573,7 @@ export const Background = styled.div`
     } 
 
     @media (min-width:${DEVICE_BREAKPOINTS.S}){
-        width: 32.7rem;
+        
         height: 12rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
@@ -578,35 +581,47 @@ export const Background = styled.div`
     } 
 
     @media (min-width:${DEVICE_BREAKPOINTS.SM}){
-        width: 37.7rem;
+        
         height: 12rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
 
         border-radius: 3px;
             
         position: absolute;
-        top: 20.3rem;
+        top: 4.5rem;
+        z-index: -1;
+    } 
+
+    @media (min-width:${DEVICE_BREAKPOINTS.MD}){
+        
+        height: 12rem;
+        background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
+
+        border-radius: 3px;
+            
+        position: absolute;
+        top: 9rem;
         z-index: -1;
     } 
     
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
-        width: 110rem;
+        
         height: 26rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
         border-radius: 3px;
         position: absolute;
 
-        top: 22.1rem;
+        top: 5.5rem;
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}){
-        width: 120rem;
+        
         height: 32.3rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);        
         border-radius: 3px;
         position: absolute;
 
-        top: 22.4rem;
+        top: 10rem;
 
         z-index: -1;
     } 

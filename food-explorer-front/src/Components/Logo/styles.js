@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`  
-    @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+    @media (max-width:1023px) {
         
         .logo{
             display: flex;

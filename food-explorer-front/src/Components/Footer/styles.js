@@ -82,7 +82,7 @@ export const Content = styled.div`
         
         margin: auto;
 
-        padding: 2.4px 12.3rem;
+        padding: 2.4rem 12.3rem;
 
         .logo{
             display: flex;

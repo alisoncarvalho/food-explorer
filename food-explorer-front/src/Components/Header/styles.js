@@ -19,7 +19,7 @@ export const Content = styled.div`
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 1.6rem;
+            gap: 7%;
         }
 
         .mobile{
@@ -41,7 +41,7 @@ export const Content = styled.div`
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 3rem;
+            gap: 15%;
 
             padding: 5rem 2.8rem 0 ;
         }
@@ -66,7 +66,7 @@ export const Content = styled.div`
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 6rem;
+            gap: 23%;
 
             padding: 5rem 2.8rem 0 ;
         }
@@ -82,14 +82,13 @@ export const Content = styled.div`
 
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         width: 100%;  
-        padding: 2.4rem 0 ;
+        padding: 2.4rem 10rem ;
 
         .header , .headerAdmin{
             display: flex;
             align-items: center;
-            gap: 21rem;
-            white-space: nowrap;
-            padding: 5rem 2.8rem 0 ;
+            gap: 30%;
+            white-space: nowrap;            
         }
             
         .mobile{
@@ -143,7 +142,7 @@ export const Content = styled.div`
 `;
 
 export const Search = styled.div`
-    @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+    @media (max-width:1023px) {
         display: none;
     }
 
@@ -173,7 +172,7 @@ export const RedButton = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+    @media (max-width:1023px) {
         display: none;
     }
 `;
@@ -186,7 +185,7 @@ export const Exit = styled.div`
         margin-top: 2rem;
     }
 
-    @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
+    @media (max-width:1023px) {
         display: none;
     }
 `;

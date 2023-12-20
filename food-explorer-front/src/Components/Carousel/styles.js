@@ -6,9 +6,7 @@ export const Container = styled.div`
   max-width: 100%;
   margin-top: 3rem;
 
-  @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
-    margin-left: 1.5rem;
-  }
+ 
 
 `;
 
@@ -42,7 +40,7 @@ export const ControlLeft = styled.div`
   height: 2.5rem;
   font-size: 2.5rem;
 
-  @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
+  @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
     display: none;
   }
   
@@ -57,7 +55,7 @@ export const ControlRight = styled.div`
   height: 2.5rem;
   font-size: 2.5rem;
 
-  @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
+  @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
     display: none;
   }
 
@@ -73,7 +71,7 @@ export const GradientLeft = styled.div`
   background: ${({ theme }) => theme.COLORS.GRADIENT_100};
   pointer-events: none;
   
-  @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
+  @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
     display: none;
   }
 
@@ -90,7 +88,7 @@ export const GradientRight = styled.div`
   background: ${({ theme }) => theme.COLORS.GRADIENT_100};
   pointer-events: none;
 
-  @media (max-width:${DEVICE_BREAKPOINTS.LG}) {
+  @media (max-width:${DEVICE_BREAKPOINTS.MD}) {
     display: none;
   }
 

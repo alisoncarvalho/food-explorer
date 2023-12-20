@@ -21,8 +21,8 @@ export default createGlobalStyle`
         -webkit-font-smoothing: antialiased;
 
         *::-webkit-scrollbar {
-            width: 22px;
-            height: 22px;
+            width: 2.2rem;
+            height: 2.2rem;
             border-radius: 9999px;
         }
 
