@@ -144,10 +144,18 @@ export const Container = styled.div`
       text-align: center;      
 
       h1{
+         font-family: Poppins;
+         font-size: 2.4rem;
+         font-style: normal;
+         font-weight: 700;
          color: ${({theme})=> theme.COLORS.LIGHT_300};
       }
 
       p{
+         display: block;
+         font-family: 'Roboto';
+         font-size: 1.4rem;
+         font-weight: 400;
          color: ${({theme})=> theme.COLORS.LIGHT_400};
       }
 
@@ -268,10 +276,18 @@ export const Container = styled.div`
       text-align: center;      
 
       h1{
+         font-family: Poppins;
+         font-size: 2.4rem;
+         font-style: normal;
+         font-weight: 700;
          color: ${({theme})=> theme.COLORS.LIGHT_300};
       }
 
       p{
+         display: block;
+         font-family: 'Roboto';
+         font-size: 1.4rem;
+         font-weight: 400;
          color: ${({theme})=> theme.COLORS.LIGHT_400};
       }
 

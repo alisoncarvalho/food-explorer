@@ -47,6 +47,7 @@ export function Cards({ data  } ){
         navigate(`/editdish/${data.id}`)
     }
 
+    console.log(data.description)
     return(
        
         <Container >
