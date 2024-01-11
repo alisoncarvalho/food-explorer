@@ -158,8 +158,8 @@ export function NewDish(){
                             <label className="label" htmlFor="price"> Preço</label>
                         <   Input 
                         id="price" 
-                        type="money" 
-                        placeholder="R$ 25,00"
+                        type="number" 
+                        placeholder="25,00"
                         onChange={e => setPrice(e.target.value)}
                         />
                         </div>

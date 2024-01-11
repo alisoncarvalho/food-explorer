@@ -37,6 +37,17 @@ export default createGlobalStyle`
         outline: none;
     }
 
+    input[type=number]::-webkit-inner-spin-button{
+        -weblit-appearance:none;
+        appearance: none;
+        
+    }
+
+    input[type=number]{
+        -moz-appearance:textfield;
+        appearance: textfield;
+    }
+
     button {
         font-family: 'Poppins', sans-serif;
     }
