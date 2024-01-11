@@ -6,7 +6,7 @@ import {IoIosArrowBack} from 'react-icons/io'
 import {Button} from '../../Components/Button'
 import {FiUpload} from 'react-icons/fi'
 import {TextArea} from '../../Components/TextArea'
-import { Section } from "../../Components/Section";
+
 import { NoteItem } from "../../Components/NoteItem";
 import { useAuth } from "../../hooks/auth";
 import { useState } from "react";

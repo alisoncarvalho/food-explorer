@@ -15,7 +15,7 @@ Este é o código frontend do aplicativo FoodExplorer, que simula uma loja virtu
 - `yarn run dev`
 
 ## Deploy:
-[Frontend]()
+[Frontend](https://foodexploreralison.netlify.app/)
 
 ## Como usar:
 ### Como administrador:
