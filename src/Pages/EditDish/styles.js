@@ -394,6 +394,7 @@ export const Form = styled.form`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
+        height: 100vh;
         display: flex;
         flex-direction: column;
         padding: 2.4rem 12.3rem;
@@ -530,15 +531,17 @@ export const Form = styled.form`
             width: 100%;
             display: flex;
             flex-direction: row;
-            gap: 3.2rem;
-
-            .tagsBox{
+            gap: 32px;
+            
+            .ingredients{
                 width: 100%;
-                min-width: 60rem;
             }
+
             .price{
                 width: 100%;
+                max-width: 30rem;
             }
+            
         }
         
         .button{
@@ -573,6 +576,7 @@ export const Form = styled.form`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}){
+        height: 100vh;
         display: flex;
         flex-direction: column;
         padding: 2.4rem 12.3rem;
@@ -707,14 +711,17 @@ export const Form = styled.form`
             width: 100%;
             display: flex;
             flex-direction: row;
-            gap: 3.2rem;
-
-            .tagsBox{
-                width: 83.7rem;
-            }
-            .price{
+            gap: 32px;
+            
+            .ingredients{
                 width: 100%;
             }
+
+            .price{
+                width: 100%;
+                max-width: 30rem;
+            }
+            
         }
         
         .button{
