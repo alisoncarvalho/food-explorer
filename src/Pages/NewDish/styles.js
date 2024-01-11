@@ -169,6 +169,7 @@ export const Form = styled.form`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.LG}){
+        height: 100vh;
         display: flex;
         flex-direction: column;
         padding: 24px 123px;
@@ -306,12 +307,15 @@ export const Form = styled.form`
             flex-direction: row;
             gap: 32px;
             
-            .tagsBox{
-                width: 837px;
-            }
-            .price{
+            .ingredients{
                 width: 100%;
             }
+
+            .price{
+                width: 100%;
+                max-width: 25rem;
+            }
+            
         }
         
         .button{
@@ -321,6 +325,7 @@ export const Form = styled.form`
     }
 
     @media (min-width:${DEVICE_BREAKPOINTS.XL}){
+        height: 100vh;
         display: flex;
         flex-direction: column;
         padding: 24px 123px;
@@ -407,8 +412,25 @@ export const Form = styled.form`
                 
             }
         }
+        .secondLine{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            
+            .ingredients{
+                width: 100%;
+            }
+
+            .price{
+                width: 100%;
+                max-width: 30rem;
+            }
+            
+        }
             
         .tagsBox{
+            display: flex;
             width: 100%;        
             border: none;
             border-radius: 5px;
@@ -424,7 +446,7 @@ export const Form = styled.form`
                 flex-direction: row;
                 gap: 8px;
             }
-
+            
             button{
                 background: none;
                 margin-top: 0;
@@ -452,19 +474,7 @@ export const Form = styled.form`
             }
         }
 
-        .secondLine{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            gap: 32px;
-            
-            .tagsBox{
-                width: 837px;
-            }
-            .price{
-                width: 100%;
-            }
-        }
+        
         
         .button{
             width: 172px;
