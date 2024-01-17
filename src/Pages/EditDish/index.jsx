@@ -122,7 +122,7 @@ export function EditDish(){
                         </div>
                         <div className="price">
                             <label className="label" htmlFor="price"> Preço</label>
-                        <   Input id="price" type="money" placeholder="R$ 25,00" onChange={e => setPrice(e.target.value)}/>
+                        <   Input id="price" type="number" placeholder="25,00" onChange={e => setPrice(e.target.value)}/>
                         </div>
                     </div>
                     <label className="label" > Descrição </label>
